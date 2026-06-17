@@ -44,7 +44,9 @@ def load_network(data_dir: str):
 
 
 def graph_figure(macro: nx.Graph) -> go.Figure:
-    pos = nx.kamada_kawai_layout(macro)
+    # spring_layout no requiere scipy (a diferencia de kamada_kawai_layout);
+    # seed fija para que el layout sea reproducible entre recargas.
+    pos = nx.spring_layout(macro, seed=42, k=0.6, iterations=200)
     edge_x, edge_y = [], []
     for u, v in macro.edges():
         edge_x += [pos[u][0], pos[v][0], None]
