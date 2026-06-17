@@ -1,0 +1,125 @@
+# Bitácora de intervención
+
+## 1. Encabezado
+- Fecha y hora: 17-06-2026, 15:58
+- Solicitud original: "Crear un modelo en Python, alojado en un repositorio de GitHub y
+  desplegable en una plataforma web tipo Streamlit, que caracterice la red ferroviaria
+  a partir de las exportaciones de OpenTrack. Como primer paso: parser de Netvisio +
+  Metrolinx que construya un grafo NetworkX con largos, velocidades y capacidades, y un
+  resumen para validar que la topología quedó bien conectada."
+- Objetivos de optimización definidos por el usuario: robustez ante retrasos,
+  maximizar frecuencia/capacidad, minimizar tiempo de viaje. Plataforma: Streamlit.
+- Archivos resultantes (todos bajo la carpeta nueva "opentrack-network-model"):
+    - README.md
+    - requirements.txt
+    - .gitignore
+    - src/otnet/__init__.py
+    - src/otnet/parsers.py
+    - src/otnet/network.py
+    - src/otnet/running_time.py
+    - scripts/build_network.py
+    - app/streamlit_app.py
+    - tests/test_parsers.py
+    - data/raw/  (copia de las 4 exportaciones usadas)
+    - bitacora_opentrack-network-model_2026-06-17.txt (este archivo)
+- Archivos de entrada (exportaciones de OpenTrack, carpeta "2 Export"):
+    - Export Netvisio-format Infraestructure.node / .nodeattr / .edge / .edgeattr
+    - Export Metrolinx-format Infraestructure.txt
+
+## 2. Resumen ejecutivo
+Creé un repositorio Python que lee las exportaciones de infraestructura de OpenTrack en
+formatos Netvisio (macroscópico: estaciones, nº de vías, adyacencias) y Metrolinx
+(microscópico: aristas con largo, velocidades, pendiente, radio), construye dos grafos
+NetworkX, estima tiempos de marcha en marcha libre y entrega un resumen de validación.
+Incluye app Streamlit, tests y datos de ejemplo. Ejecutado y testeado sobre los datos
+reales: 45 estaciones, 2.642 aristas, 220,21 km, 9 corredores. Los tests pasan (5/5).
+
+## 3. Detalle de cambios (paso a paso)
+1. Verifiqué formato y codificación de los archivos de entrada (bash strings/awk/file):
+   - Metrolinx: 28 columnas tab-separadas, encabezado en línea de comentario "//",
+     codificación ISO-8859-1.
+   - Netvisio .node: 4 campos (code, name, x, y); .nodeattr: 3 campos con único atributo
+     "Number of Tracks"; .edge: 2 campos (estación origen, destino); .edgeattr: vacío.
+2. Creé la estructura del repo (README, requirements, .gitignore, src/otnet, scripts,
+   app, tests, data/raw).
+3. Escribí src/otnet/parsers.py:
+   - parse_netvisio(): lee los tres archivos Netvisio; construye dict tracks_by_station
+     desde el atributo "Number of Tracks".
+   - parse_metrolinx(): lee el .txt omitiendo comentarios "//", asigna las 28 columnas
+     por posición (constante METROLINX_COLUMNS) y convierte a numérico largo, km,
+     velocidades, pendiente y radio.
+   - load_all(): atajo que carga ambos desde un directorio.
+4. Escribí src/otnet/running_time.py:
+   - free_run_time(largo, velocidad) = largo / (velocidad/3.6) en segundos.
+   - add_running_times(): agrega t_up_s y t_down_s usando speed_1_1 (asc.) y speed_2_1
+     (desc.).
+   - running_time_by_document(): resume largo y tiempo por corredor.
+5. Escribí src/otnet/network.py:
+   - build_macroscopic_graph(): grafo no dirigido de estaciones (atributos name,
+     n_tracks) con aristas Netvisio.
+   - build_microscopic_graph(): grafo dirigido de vértices de vía con atributos físicos;
+     IDs prefijados por documento para evitar colisiones entre corredores.
+   - network_summary() y degree_table(): métricas de validación.
+6. Escribí scripts/build_network.py (CLI con --data-dir) que imprime el resumen.
+7. Escribí app/streamlit_app.py: métricas, aviso de conectividad, grafo Plotly
+   (layout kamada_kawai porque las coordenadas Netvisio vienen en 0), tablas de
+   estaciones y de corredores/aristas.
+8. Escribí tests/test_parsers.py (pytest) con un test unitario de free_run_time y
+   cuatro tests sobre datos reales (se saltan si no hay datos en data/raw).
+9. Copié a data/raw las 4 exportaciones usadas (Netvisio x3 con datos + Metrolinx).
+10. Instalé dependencias y ejecuté el CLI y los tests sobre datos reales.
+
+## 4. Decisiones tomadas por iniciativa propia
+- Construí el repo dentro de una carpeta nueva "opentrack-network-model" en la carpeta
+  del proyecto, porque la solicitud pide un repositorio GitHub independiente.
+- Usé layout "src/" e instalación vía sys.path en scripts/tests, para que el repo corra
+  sin instalación previa (cómodo para Streamlit Community Cloud).
+- Elegí Plotly + NetworkX para el grafo en lugar de pyvis/graphviz, por compatibilidad
+  directa con Streamlit y menos dependencias de sistema.
+- Para el tiempo de marcha usé speed_1_1 (asc.) y speed_2_1 (desc.), es decir la primera
+  de las 4 velocidades por sentido, asumiendo que es la velocidad base. Las otras 3 son
+  categorías adicionales (p. ej. pendulación) que se pueden parametrizar después.
+- Versioné los datos crudos de data/raw (no los ignoré en .gitignore) porque Streamlit
+  Cloud necesita los datos en el repo para desplegar la demo.
+- No incluí los formatos OTML, IVT ni trafIT en el pipeline: Metrolinx los cubre o supera
+  para esta fase. trafIT se incorporará al definir los itinerarios a optimizar.
+
+## 5. Supuestos
+- Las exportaciones están en ISO-8859-1 (verificado con `file -i`).
+- El campo "length" de Metrolinx está en metros (consistente con el rango observado y con
+  el km acumulado de los vértices).
+- "Number of Tracks" representa la capacidad de vías de cada estación.
+- speed_1_1 / speed_2_1 son la velocidad base de cada sentido en km/h.
+- Las 4 componentes desconectadas (ver sección 6) reflejan la exportación tal cual, no un
+  error del parser: el grafo se construye exactamente con las adyacencias del archivo
+  .edge.
+
+## 6. Elementos pendientes o sugerencias
+- CONECTIVIDAD: la red macroscópica salió en 4 componentes desconectadas:
+    (1) eje CC–CW–LT (Concepción–Coronel–Lota), 26 estaciones.
+    (2) eje BU–GO–HQ–TL–UN (Hualqui–Talcamávida), 9 estaciones.
+    (3) eje EZ–TH (El Arenal–Talcahuano), 5 estaciones.
+    (4) eje OH–ZW–CV (Chiguayante–La Leonera), 5 estaciones.
+  Causa probable: el archivo .edge de Netvisio no generó los enlaces de empalme entre
+  corredores que comparten estación (cada documento aporta sus adyacencias internas, pero
+  no se cosieron los nodos de unión entre documentos). Sugerencia: revisar en OpenTrack
+  que los documentos estén correctamente unidos en sus vértices de empalme antes de
+  reexportar, o agregar manualmente las aristas de empalme conocidas (p. ej. CC–CV,
+  CC–EZ, CC–HQ) en una capa de corrección.
+- Los tiempos de marcha son cota inferior (marcha libre). Para el optimizador conviene
+  reemplazarlos por tiempos de la simulación OpenTrack (.otsimcor) o un cálculo con
+  aceleración/frenado.
+- Falta incorporar horarios (.timetable) y servicios (.courses) para tener la demanda y
+  los itinerarios reales.
+- Aún no se inicializó git ni se subió a GitHub (no tengo credenciales); el repo está
+  listo para `git init` y push.
+
+## 7. Validaciones recomendadas
+- Revisar si las 4 componentes deben estar unidas y, en ese caso, identificar los
+  empalmes faltantes entre corredores.
+- Verificar que el largo total (220,21 km) sea coherente con la extensión real de la red
+  base modelada.
+- Contrastar el nº de vías por estación (min 1, max 9, media 2,69) contra la realidad
+  operativa (EZ aparece con 9 vías; confirmar).
+- Confirmar que speed_1_1 es la velocidad correcta a usar como referencia, o indicar cuál
+  de las 4 corresponde al material rodante objetivo.
