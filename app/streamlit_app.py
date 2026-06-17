@@ -134,9 +134,10 @@ with tab_marey:
 
     freight = load_freight()
     k = kpis(tt, stations)
+    por_dir = k.get("por_direccion", {})
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Pasajeros CC→CW", k["por_direccion"].get("CC->CW", {}).get("trenes", 0))
-    c2.metric("Pasajeros CW→CC", k["por_direccion"].get("CW->CC", {}).get("trenes", 0))
+    c1.metric("Pasajeros CC→CW", por_dir.get("CC->CW", {}).get("trenes", 0))
+    c2.metric("Pasajeros CW→CC", por_dir.get("CW->CC", {}).get("trenes", 0))
     c3.metric("Tiempo de viaje (min)", k["tiempo_viaje_min"]["media"])
     c4.metric("Trenes de carga", int(freight["train"].nunique()) if freight is not None else 0)
 
@@ -156,7 +157,7 @@ with tab_marey:
         st.subheader("Indicadores por sentido")
         rows = [{"sentido": d, "trenes": v["trenes"],
                  "viaje medio (min)": v["viaje_medio_min"]}
-                for d, v in k["por_direccion"].items()]
+                for d, v in por_dir.items()]
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
     with colB:
         st.subheader("Salidas e intervalos")
