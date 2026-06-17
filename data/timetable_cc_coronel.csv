@@ -1,0 +1,796 @@
+train,period,direction,station,arr,dep,arr_s,dep_s,stop_order
+20281,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,5:30,5:30,19800,19800,0
+20281,Punta Mañana / Valle,CC->CW,Juan Pablo II,5:35,5:36,20140,20170,1
+20281,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,5:38,5:38,20315,20335,2
+20281,Punta Mañana / Valle,CC->CW,Alborada,5:41,5:41,20485,20505,3
+20281,Punta Mañana / Valle,CC->CW,Costa Mar,5:43,5:43,20600,20625,4
+20281,Punta Mañana / Valle,CC->CW,El Parque,5:46,5:46,20760,20780,5
+20281,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,5:48,5:49,20925,20955,6
+20281,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,5:51,5:52,21110,21130,7
+20281,Punta Mañana / Valle,CC->CW,Hito Galvarino,5:58,5:58,21480,21500,8
+20281,Punta Mañana / Valle,CC->CW,Los Canelos,6:02,6:02,21720,21740,9
+20281,Punta Mañana / Valle,CC->CW,Huinca,6:04,6:04,21840,21860,10
+20281,Punta Mañana / Valle,CC->CW,Cristo Redentor,6:06,6:06,21980,22000,11
+20281,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),6:06,6:06,22000,22000,12
+20281,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,6:09,6:09,22150,22170,13
+20281,Punta Mañana / Valle,CC->CW,CORONEL,6:12,,22320,22320,14
+20001,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,6:45,6:45,24300,24300,0
+20001,Punta Mañana / Valle,CC->CW,Juan Pablo II,6:50,6:51,24640,24670,1
+20001,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,6:53,6:53,24815,24835,2
+20001,Punta Mañana / Valle,CC->CW,Alborada,6:56,6:56,24985,25005,3
+20001,Punta Mañana / Valle,CC->CW,Costa Mar,6:58,6:58,25100,25125,4
+20001,Punta Mañana / Valle,CC->CW,El Parque,7:01,7:01,25260,25280,5
+20001,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,7:03,7:04,25425,25455,6
+20001,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,7:06,7:07,25610,25630,7
+20001,Punta Mañana / Valle,CC->CW,Hito Galvarino,7:13,7:13,25980,26000,8
+20001,Punta Mañana / Valle,CC->CW,Los Canelos,7:17,7:17,26220,26240,9
+20001,Punta Mañana / Valle,CC->CW,Huinca,7:19,7:19,26340,26360,10
+20001,Punta Mañana / Valle,CC->CW,Cristo Redentor,7:21,7:21,26480,26500,11
+20001,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),7:21,7:21,26500,26500,12
+20001,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,7:24,7:24,26650,26670,13
+20001,Punta Mañana / Valle,CC->CW,CORONEL,7:27,,26820,26820,14
+20003,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,6:57,6:57,25020,25020,0
+20003,Punta Mañana / Valle,CC->CW,Juan Pablo II,7:02,7:03,25360,25390,1
+20003,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,7:05,7:05,25535,25555,2
+20003,Punta Mañana / Valle,CC->CW,Alborada,7:08,7:08,25705,25725,3
+20003,Punta Mañana / Valle,CC->CW,Costa Mar,7:10,7:10,25820,25845,4
+20003,Punta Mañana / Valle,CC->CW,El Parque,7:13,7:13,25980,26000,5
+20003,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,7:15,7:16,26145,26175,6
+20003,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,7:18,7:19,26330,26350,7
+20003,Punta Mañana / Valle,CC->CW,Hito Galvarino,7:25,7:25,26700,26720,8
+20003,Punta Mañana / Valle,CC->CW,Los Canelos,7:29,7:29,26940,26960,9
+20003,Punta Mañana / Valle,CC->CW,Huinca,7:31,7:31,27060,27080,10
+20003,Punta Mañana / Valle,CC->CW,Cristo Redentor,7:33,7:33,27200,27220,11
+20003,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),7:33,7:33,27220,27220,12
+20003,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,7:36,7:36,27370,27390,13
+20003,Punta Mañana / Valle,CC->CW,CORONEL,7:39,,27540,27540,14
+20005,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,7:13,7:13,25980,25980,0
+20005,Punta Mañana / Valle,CC->CW,Juan Pablo II,7:18,7:19,26320,26350,1
+20005,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,7:21,7:21,26495,26515,2
+20005,Punta Mañana / Valle,CC->CW,Alborada,7:24,7:24,26665,26685,3
+20005,Punta Mañana / Valle,CC->CW,Costa Mar,7:26,7:26,26780,26805,4
+20005,Punta Mañana / Valle,CC->CW,El Parque,7:29,7:29,26940,26960,5
+20005,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,7:31,7:32,27105,27135,6
+20005,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,7:34,7:35,27290,27310,7
+20005,Punta Mañana / Valle,CC->CW,Hito Galvarino,7:41,7:41,27660,27680,8
+20005,Punta Mañana / Valle,CC->CW,Los Canelos,7:45,7:45,27900,27920,9
+20005,Punta Mañana / Valle,CC->CW,Huinca,7:47,7:47,28020,28040,10
+20005,Punta Mañana / Valle,CC->CW,Cristo Redentor,7:49,7:49,28160,28180,11
+20005,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),7:49,7:49,28180,28180,12
+20005,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,7:52,7:52,28330,28350,13
+20005,Punta Mañana / Valle,CC->CW,CORONEL,7:55,,28500,28500,14
+20009,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,7:25,7:25,26700,26700,0
+20009,Punta Mañana / Valle,CC->CW,Juan Pablo II,7:30,7:31,27040,27070,1
+20009,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,7:33,7:33,27215,27235,2
+20009,Punta Mañana / Valle,CC->CW,Alborada,7:36,7:36,27385,27405,3
+20009,Punta Mañana / Valle,CC->CW,Costa Mar,7:38,7:38,27500,27525,4
+20009,Punta Mañana / Valle,CC->CW,El Parque,7:41,7:41,27660,27680,5
+20009,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,7:43,7:44,27825,27855,6
+20009,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,7:46,7:47,28010,28030,7
+20009,Punta Mañana / Valle,CC->CW,Hito Galvarino,7:53,7:53,28380,28400,8
+20009,Punta Mañana / Valle,CC->CW,Los Canelos,7:57,7:57,28620,28640,9
+20009,Punta Mañana / Valle,CC->CW,Huinca,7:59,7:59,28740,28760,10
+20009,Punta Mañana / Valle,CC->CW,Cristo Redentor,8:01,8:01,28880,28900,11
+20009,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),8:01,8:01,28900,28900,12
+20009,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,8:04,8:04,29050,29070,13
+20009,Punta Mañana / Valle,CC->CW,CORONEL,8:07,,29220,29220,14
+20011,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,7:42,7:42,27720,27720,0
+20011,Punta Mañana / Valle,CC->CW,Juan Pablo II,7:47,7:48,28060,28090,1
+20011,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,7:50,7:50,28235,28255,2
+20011,Punta Mañana / Valle,CC->CW,Alborada,7:53,7:53,28405,28425,3
+20011,Punta Mañana / Valle,CC->CW,Costa Mar,7:55,7:55,28520,28545,4
+20011,Punta Mañana / Valle,CC->CW,El Parque,7:58,7:58,28680,28700,5
+20011,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,8:00,8:01,28845,28875,6
+20011,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,8:03,8:04,29030,29050,7
+20011,Punta Mañana / Valle,CC->CW,Hito Galvarino,8:10,8:10,29400,29420,8
+20011,Punta Mañana / Valle,CC->CW,Los Canelos,8:14,8:14,29640,29660,9
+20011,Punta Mañana / Valle,CC->CW,Huinca,8:16,8:16,29760,29780,10
+20011,Punta Mañana / Valle,CC->CW,Cristo Redentor,8:18,8:18,29900,29920,11
+20011,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),8:18,8:18,29920,29920,12
+20011,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,8:21,8:21,30070,30090,13
+20011,Punta Mañana / Valle,CC->CW,CORONEL,8:24,,30240,30240,14
+20015,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,7:54,7:54,28440,28440,0
+20015,Punta Mañana / Valle,CC->CW,Juan Pablo II,7:59,8:00,28780,28810,1
+20015,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,8:02,8:02,28955,28975,2
+20015,Punta Mañana / Valle,CC->CW,Alborada,8:05,8:05,29125,29145,3
+20015,Punta Mañana / Valle,CC->CW,Costa Mar,8:07,8:07,29240,29265,4
+20015,Punta Mañana / Valle,CC->CW,El Parque,8:10,8:10,29400,29420,5
+20015,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,8:12,8:13,29565,29595,6
+20015,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,8:15,8:16,29750,29770,7
+20015,Punta Mañana / Valle,CC->CW,Hito Galvarino,8:22,8:22,30120,30140,8
+20015,Punta Mañana / Valle,CC->CW,Los Canelos,8:26,8:26,30360,30380,9
+20015,Punta Mañana / Valle,CC->CW,Huinca,8:28,8:28,30480,30500,10
+20015,Punta Mañana / Valle,CC->CW,Cristo Redentor,8:30,8:30,30620,30640,11
+20015,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),8:30,8:30,30640,30640,12
+20015,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,8:33,8:33,30790,30810,13
+20015,Punta Mañana / Valle,CC->CW,CORONEL,8:36,,30960,30960,14
+20017,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,8:17,8:17,29820,29820,0
+20017,Punta Mañana / Valle,CC->CW,Juan Pablo II,8:22,8:23,30160,30190,1
+20017,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,8:25,8:25,30335,30355,2
+20017,Punta Mañana / Valle,CC->CW,Alborada,8:28,8:28,30505,30525,3
+20017,Punta Mañana / Valle,CC->CW,Costa Mar,8:30,8:30,30620,30645,4
+20017,Punta Mañana / Valle,CC->CW,El Parque,8:33,8:33,30780,30800,5
+20017,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,8:35,8:36,30945,30975,6
+20017,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,8:38,8:39,31130,31150,7
+20017,Punta Mañana / Valle,CC->CW,Hito Galvarino,8:45,8:45,31500,31520,8
+20017,Punta Mañana / Valle,CC->CW,Los Canelos,8:49,8:49,31740,31760,9
+20017,Punta Mañana / Valle,CC->CW,Huinca,8:51,8:51,31860,31880,10
+20017,Punta Mañana / Valle,CC->CW,Cristo Redentor,8:53,8:53,32000,32020,11
+20017,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),8:53,8:53,32020,32020,12
+20017,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,8:56,8:56,32170,32190,13
+20017,Punta Mañana / Valle,CC->CW,CORONEL,8:59,,32340,32340,14
+20023,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,8:28,8:28,30480,30480,0
+20023,Punta Mañana / Valle,CC->CW,Juan Pablo II,8:33,8:34,30820,30850,1
+20023,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,8:36,8:36,30995,31015,2
+20023,Punta Mañana / Valle,CC->CW,Alborada,8:39,8:39,31165,31185,3
+20023,Punta Mañana / Valle,CC->CW,Costa Mar,8:41,8:41,31280,31305,4
+20023,Punta Mañana / Valle,CC->CW,El Parque,8:44,8:44,31440,31460,5
+20023,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,8:46,8:47,31605,31635,6
+20023,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,8:49,8:50,31790,31810,7
+20023,Punta Mañana / Valle,CC->CW,Hito Galvarino,8:56,8:56,32160,32180,8
+20023,Punta Mañana / Valle,CC->CW,Los Canelos,9:00,9:00,32400,32420,9
+20023,Punta Mañana / Valle,CC->CW,Huinca,9:02,9:02,32520,32540,10
+20023,Punta Mañana / Valle,CC->CW,Cristo Redentor,9:04,9:04,32660,32680,11
+20023,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),9:04,9:04,32680,32680,12
+20023,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,9:07,9:07,32830,32850,13
+20023,Punta Mañana / Valle,CC->CW,CORONEL,9:10,,33000,33000,14
+20025,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,8:39,8:39,31140,31140,0
+20025,Punta Mañana / Valle,CC->CW,Juan Pablo II,8:44,8:45,31480,31510,1
+20025,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,8:47,8:47,31655,31675,2
+20025,Punta Mañana / Valle,CC->CW,Alborada,8:50,8:50,31825,31845,3
+20025,Punta Mañana / Valle,CC->CW,Costa Mar,8:52,8:52,31940,31965,4
+20025,Punta Mañana / Valle,CC->CW,El Parque,8:55,8:55,32100,32120,5
+20025,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,8:57,8:58,32265,32295,6
+20025,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,9:00,9:01,32450,32470,7
+20025,Punta Mañana / Valle,CC->CW,Hito Galvarino,9:07,9:07,32820,32840,8
+20025,Punta Mañana / Valle,CC->CW,Los Canelos,9:11,9:11,33060,33080,9
+20025,Punta Mañana / Valle,CC->CW,Huinca,9:13,9:13,33180,33200,10
+20025,Punta Mañana / Valle,CC->CW,Cristo Redentor,9:15,9:15,33320,33340,11
+20025,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),9:15,9:15,33340,33340,12
+20025,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,9:18,9:18,33490,33510,13
+20025,Punta Mañana / Valle,CC->CW,CORONEL,9:21,,33660,33660,14
+20027,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,8:51,8:51,31860,31860,0
+20027,Punta Mañana / Valle,CC->CW,Juan Pablo II,8:56,8:57,32200,32230,1
+20027,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,8:59,8:59,32375,32395,2
+20027,Punta Mañana / Valle,CC->CW,Alborada,9:02,9:02,32545,32565,3
+20027,Punta Mañana / Valle,CC->CW,Costa Mar,9:04,9:04,32660,32685,4
+20027,Punta Mañana / Valle,CC->CW,El Parque,9:07,9:07,32820,32840,5
+20027,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,9:09,9:10,32985,33015,6
+20027,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,9:12,9:13,33170,33190,7
+20027,Punta Mañana / Valle,CC->CW,Hito Galvarino,9:19,9:19,33540,33560,8
+20027,Punta Mañana / Valle,CC->CW,Los Canelos,9:23,9:23,33780,33800,9
+20027,Punta Mañana / Valle,CC->CW,Huinca,9:25,9:25,33900,33920,10
+20027,Punta Mañana / Valle,CC->CW,Cristo Redentor,9:27,9:27,34040,34060,11
+20027,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),9:27,9:27,34060,34060,12
+20027,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,9:30,9:30,34210,34230,13
+20027,Punta Mañana / Valle,CC->CW,CORONEL,9:33,,34380,34380,14
+20029,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,9:03,9:03,32580,32580,0
+20029,Punta Mañana / Valle,CC->CW,Juan Pablo II,9:08,9:09,32920,32950,1
+20029,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,9:11,9:11,33095,33115,2
+20029,Punta Mañana / Valle,CC->CW,Alborada,9:14,9:14,33265,33285,3
+20029,Punta Mañana / Valle,CC->CW,Costa Mar,9:16,9:16,33380,33405,4
+20029,Punta Mañana / Valle,CC->CW,El Parque,9:19,9:19,33540,33560,5
+20029,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,9:21,9:22,33705,33735,6
+20029,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,9:24,9:25,33890,33910,7
+20029,Punta Mañana / Valle,CC->CW,Hito Galvarino,9:31,9:31,34260,34280,8
+20029,Punta Mañana / Valle,CC->CW,Los Canelos,9:35,9:35,34500,34520,9
+20029,Punta Mañana / Valle,CC->CW,Huinca,9:37,9:37,34620,34640,10
+20029,Punta Mañana / Valle,CC->CW,Cristo Redentor,9:39,9:39,34760,34780,11
+20029,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),9:39,9:39,34780,34780,12
+20029,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,9:42,9:42,34930,34950,13
+20029,Punta Mañana / Valle,CC->CW,CORONEL,9:45,,35100,35100,14
+20031,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,9:15,9:15,33300,33300,0
+20031,Punta Mañana / Valle,CC->CW,Juan Pablo II,9:20,9:21,33640,33670,1
+20031,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,9:23,9:23,33815,33835,2
+20031,Punta Mañana / Valle,CC->CW,Alborada,9:26,9:26,33985,34005,3
+20031,Punta Mañana / Valle,CC->CW,Costa Mar,9:28,9:28,34100,34125,4
+20031,Punta Mañana / Valle,CC->CW,El Parque,9:31,9:31,34260,34280,5
+20031,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,9:33,9:34,34425,34455,6
+20031,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,9:36,9:37,34610,34630,7
+20031,Punta Mañana / Valle,CC->CW,Hito Galvarino,9:43,9:43,34980,35000,8
+20031,Punta Mañana / Valle,CC->CW,Los Canelos,9:47,9:47,35220,35240,9
+20031,Punta Mañana / Valle,CC->CW,Huinca,9:49,9:49,35340,35360,10
+20031,Punta Mañana / Valle,CC->CW,Cristo Redentor,9:51,9:51,35480,35500,11
+20031,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),9:51,9:51,35500,35500,12
+20031,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,9:54,9:54,35650,35670,13
+20031,Punta Mañana / Valle,CC->CW,CORONEL,9:57,,35820,35820,14
+20033,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,9:30,9:30,34200,34200,0
+20033,Punta Mañana / Valle,CC->CW,Juan Pablo II,9:35,9:36,34540,34570,1
+20033,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,9:38,9:38,34715,34735,2
+20033,Punta Mañana / Valle,CC->CW,Alborada,9:41,9:41,34885,34905,3
+20033,Punta Mañana / Valle,CC->CW,Costa Mar,9:43,9:43,35000,35025,4
+20033,Punta Mañana / Valle,CC->CW,El Parque,9:46,9:46,35160,35180,5
+20033,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,9:48,9:49,35325,35355,6
+20033,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,9:51,9:52,35510,35530,7
+20033,Punta Mañana / Valle,CC->CW,Hito Galvarino,9:58,9:58,35880,35900,8
+20033,Punta Mañana / Valle,CC->CW,Los Canelos,10:02,10:02,36120,36140,9
+20033,Punta Mañana / Valle,CC->CW,Huinca,10:04,10:04,36240,36260,10
+20033,Punta Mañana / Valle,CC->CW,Cristo Redentor,10:06,10:06,36380,36400,11
+20033,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),10:06,10:06,36400,36400,12
+20033,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,10:09,10:09,36550,36570,13
+20033,Punta Mañana / Valle,CC->CW,CORONEL,10:12,,36720,36720,14
+20035,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,9:50,9:50,35400,35400,0
+20035,Punta Mañana / Valle,CC->CW,Juan Pablo II,9:55,9:56,35740,35770,1
+20035,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,9:58,9:58,35915,35935,2
+20035,Punta Mañana / Valle,CC->CW,Alborada,10:01,10:01,36085,36105,3
+20035,Punta Mañana / Valle,CC->CW,Costa Mar,10:03,10:03,36200,36225,4
+20035,Punta Mañana / Valle,CC->CW,El Parque,10:06,10:06,36360,36380,5
+20035,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,10:08,10:09,36525,36555,6
+20035,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,10:11,10:12,36710,36730,7
+20035,Punta Mañana / Valle,CC->CW,Hito Galvarino,10:18,10:18,37080,37100,8
+20035,Punta Mañana / Valle,CC->CW,Los Canelos,10:22,10:22,37320,37340,9
+20035,Punta Mañana / Valle,CC->CW,Huinca,10:24,10:24,37440,37460,10
+20035,Punta Mañana / Valle,CC->CW,Cristo Redentor,10:26,10:26,37580,37600,11
+20035,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),10:26,10:26,37600,37600,12
+20035,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,10:29,10:29,37750,37770,13
+20035,Punta Mañana / Valle,CC->CW,CORONEL,10:32,,37920,37920,14
+20037,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,10:05,10:05,36300,36300,0
+20037,Punta Mañana / Valle,CC->CW,Juan Pablo II,10:10,10:11,36640,36670,1
+20037,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,10:13,10:13,36815,36835,2
+20037,Punta Mañana / Valle,CC->CW,Alborada,10:16,10:16,36985,37005,3
+20037,Punta Mañana / Valle,CC->CW,Costa Mar,10:18,10:18,37100,37125,4
+20037,Punta Mañana / Valle,CC->CW,El Parque,10:21,10:21,37260,37280,5
+20037,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,10:23,10:24,37425,37455,6
+20037,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,10:26,10:27,37610,37630,7
+20037,Punta Mañana / Valle,CC->CW,Hito Galvarino,10:33,10:33,37980,38000,8
+20037,Punta Mañana / Valle,CC->CW,Los Canelos,10:37,10:37,38220,38240,9
+20037,Punta Mañana / Valle,CC->CW,Huinca,10:39,10:39,38340,38360,10
+20037,Punta Mañana / Valle,CC->CW,Cristo Redentor,10:41,10:41,38480,38500,11
+20037,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),10:41,10:41,38500,38500,12
+20037,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,10:44,10:44,38650,38670,13
+20037,Punta Mañana / Valle,CC->CW,CORONEL,10:47,,38820,38820,14
+20041,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,10:30,10:30,37800,37800,0
+20041,Punta Mañana / Valle,CC->CW,Juan Pablo II,10:35,10:36,38140,38170,1
+20041,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,10:38,10:38,38315,38335,2
+20041,Punta Mañana / Valle,CC->CW,Alborada,10:41,10:41,38485,38505,3
+20041,Punta Mañana / Valle,CC->CW,Costa Mar,10:43,10:43,38600,38625,4
+20041,Punta Mañana / Valle,CC->CW,El Parque,10:46,10:46,38760,38780,5
+20041,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,10:48,10:49,38925,38955,6
+20041,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,10:51,10:52,39110,39130,7
+20041,Punta Mañana / Valle,CC->CW,Hito Galvarino,10:58,10:58,39480,39500,8
+20041,Punta Mañana / Valle,CC->CW,Los Canelos,11:02,11:02,39720,39740,9
+20041,Punta Mañana / Valle,CC->CW,Huinca,11:04,11:04,39840,39860,10
+20041,Punta Mañana / Valle,CC->CW,Cristo Redentor,11:06,11:06,39980,40000,11
+20041,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),11:06,11:06,40000,40000,12
+20041,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,11:09,11:09,40150,40170,13
+20041,Punta Mañana / Valle,CC->CW,CORONEL,11:12,,40320,40320,14
+20049,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,11:30,11:30,41400,41400,0
+20049,Punta Mañana / Valle,CC->CW,Juan Pablo II,11:35,11:36,41740,41770,1
+20049,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,11:38,11:38,41915,41935,2
+20049,Punta Mañana / Valle,CC->CW,Alborada,11:41,11:41,42085,42105,3
+20049,Punta Mañana / Valle,CC->CW,Costa Mar,11:43,11:43,42200,42225,4
+20049,Punta Mañana / Valle,CC->CW,El Parque,11:46,11:46,42360,42380,5
+20049,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,11:48,11:49,42525,42555,6
+20049,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,11:51,11:52,42710,42730,7
+20049,Punta Mañana / Valle,CC->CW,Hito Galvarino,11:58,11:58,43080,43100,8
+20049,Punta Mañana / Valle,CC->CW,Los Canelos,12:02,12:02,43320,43340,9
+20049,Punta Mañana / Valle,CC->CW,Huinca,12:04,12:04,43440,43460,10
+20049,Punta Mañana / Valle,CC->CW,Cristo Redentor,12:06,12:06,43580,43600,11
+20049,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),12:06,12:06,43600,43600,12
+20049,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,12:09,12:09,43750,43770,13
+20049,Punta Mañana / Valle,CC->CW,CORONEL,12:12,,43920,43920,14
+20051,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,11:45,11:45,42300,42300,0
+20051,Punta Mañana / Valle,CC->CW,Juan Pablo II,11:50,11:51,42640,42670,1
+20051,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,11:53,11:53,42815,42835,2
+20051,Punta Mañana / Valle,CC->CW,Alborada,11:56,11:56,42985,43005,3
+20051,Punta Mañana / Valle,CC->CW,Costa Mar,11:58,11:58,43100,43125,4
+20051,Punta Mañana / Valle,CC->CW,El Parque,12:01,12:01,43260,43280,5
+20051,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,12:03,12:04,43425,43455,6
+20051,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,12:06,12:07,43610,43630,7
+20051,Punta Mañana / Valle,CC->CW,Hito Galvarino,12:13,12:13,43980,44000,8
+20051,Punta Mañana / Valle,CC->CW,Los Canelos,12:17,12:17,44220,44240,9
+20051,Punta Mañana / Valle,CC->CW,Huinca,12:19,12:19,44340,44360,10
+20051,Punta Mañana / Valle,CC->CW,Cristo Redentor,12:21,12:21,44480,44500,11
+20051,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),12:21,12:21,44500,44500,12
+20051,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,12:24,12:24,44650,44670,13
+20051,Punta Mañana / Valle,CC->CW,CORONEL,12:27,,44820,44820,14
+20053,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,12:10,12:10,43800,43800,0
+20053,Punta Mañana / Valle,CC->CW,Juan Pablo II,12:15,12:16,44140,44170,1
+20053,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,12:18,12:18,44315,44335,2
+20053,Punta Mañana / Valle,CC->CW,Alborada,12:21,12:21,44485,44505,3
+20053,Punta Mañana / Valle,CC->CW,Costa Mar,12:23,12:23,44600,44625,4
+20053,Punta Mañana / Valle,CC->CW,El Parque,12:26,12:26,44760,44780,5
+20053,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,12:28,12:29,44925,44955,6
+20053,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,12:31,12:32,45110,45130,7
+20053,Punta Mañana / Valle,CC->CW,Hito Galvarino,12:38,12:38,45480,45500,8
+20053,Punta Mañana / Valle,CC->CW,Los Canelos,12:42,12:42,45720,45740,9
+20053,Punta Mañana / Valle,CC->CW,Huinca,12:44,12:44,45840,45860,10
+20053,Punta Mañana / Valle,CC->CW,Cristo Redentor,12:46,12:46,45980,46000,11
+20053,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),12:46,12:46,46000,46000,12
+20053,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,12:49,12:49,46150,46170,13
+20053,Punta Mañana / Valle,CC->CW,CORONEL,12:52,,46320,46320,14
+20055,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,12:23,12:23,44580,44580,0
+20055,Punta Mañana / Valle,CC->CW,Juan Pablo II,12:28,12:29,44920,44950,1
+20055,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,12:31,12:31,45095,45115,2
+20055,Punta Mañana / Valle,CC->CW,Alborada,12:34,12:34,45265,45285,3
+20055,Punta Mañana / Valle,CC->CW,Costa Mar,12:36,12:36,45380,45405,4
+20055,Punta Mañana / Valle,CC->CW,El Parque,12:39,12:39,45540,45560,5
+20055,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,12:41,12:42,45705,45735,6
+20055,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,12:44,12:45,45890,45910,7
+20055,Punta Mañana / Valle,CC->CW,Hito Galvarino,12:51,12:51,46260,46280,8
+20055,Punta Mañana / Valle,CC->CW,Los Canelos,12:55,12:55,46500,46520,9
+20055,Punta Mañana / Valle,CC->CW,Huinca,12:57,12:57,46620,46640,10
+20055,Punta Mañana / Valle,CC->CW,Cristo Redentor,12:59,12:59,46760,46780,11
+20055,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),12:59,12:59,46780,46780,12
+20055,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,13:02,13:02,46930,46950,13
+20055,Punta Mañana / Valle,CC->CW,CORONEL,13:05,,47100,47100,14
+20057,Punta Mañana / Valle,CC->CW,CONCEPCIÓN,13:00,13:00,46800,46800,0
+20057,Punta Mañana / Valle,CC->CW,Juan Pablo II,13:05,13:06,47140,47170,1
+20057,Punta Mañana / Valle,CC->CW,Diagonal Bio Bio,13:08,13:08,47315,47335,2
+20057,Punta Mañana / Valle,CC->CW,Alborada,13:11,13:11,47485,47505,3
+20057,Punta Mañana / Valle,CC->CW,Costa Mar,13:13,13:13,47600,47625,4
+20057,Punta Mañana / Valle,CC->CW,El Parque,13:16,13:16,47760,47780,5
+20057,Punta Mañana / Valle,CC->CW,LOMAS COLORADAS,13:18,13:19,47925,47955,6
+20057,Punta Mañana / Valle,CC->CW,Card. Raúl Silva Henriquez,13:21,13:22,48110,48130,7
+20057,Punta Mañana / Valle,CC->CW,Hito Galvarino,13:28,13:28,48480,48500,8
+20057,Punta Mañana / Valle,CC->CW,Los Canelos,13:32,13:32,48720,48740,9
+20057,Punta Mañana / Valle,CC->CW,Huinca,13:34,13:34,48840,48860,10
+20057,Punta Mañana / Valle,CC->CW,Cristo Redentor,13:36,13:36,48980,49000,11
+20057,Punta Mañana / Valle,CC->CW,Desvío Lagunillas (HDLC),13:36,13:36,49000,49000,12
+20057,Punta Mañana / Valle,CC->CW,Laguna Quiñenco,13:39,13:39,49150,49170,13
+20057,Punta Mañana / Valle,CC->CW,CORONEL,13:42,,49320,49320,14
+20059,Punta Tarde,CC->CW,CONCEPCIÓN,13:15,13:15,47700,47700,0
+20059,Punta Tarde,CC->CW,Juan Pablo II,13:20,13:21,48040,48070,1
+20059,Punta Tarde,CC->CW,Diagonal Bio Bio,13:23,13:23,48215,48235,2
+20059,Punta Tarde,CC->CW,Alborada,13:26,13:26,48385,48405,3
+20059,Punta Tarde,CC->CW,Costa Mar,13:28,13:28,48500,48525,4
+20059,Punta Tarde,CC->CW,El Parque,13:31,13:31,48660,48680,5
+20059,Punta Tarde,CC->CW,LOMAS COLORADAS,13:33,13:34,48825,48855,6
+20059,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,13:36,13:37,49010,49030,7
+20059,Punta Tarde,CC->CW,Hito Galvarino,13:43,13:43,49380,49400,8
+20059,Punta Tarde,CC->CW,Los Canelos,13:47,13:47,49620,49640,9
+20059,Punta Tarde,CC->CW,Huinca,13:49,13:49,49740,49760,10
+20059,Punta Tarde,CC->CW,Cristo Redentor,13:51,13:51,49880,49900,11
+20059,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),13:51,13:51,49900,49900,12
+20059,Punta Tarde,CC->CW,Laguna Quiñenco,13:54,13:54,50050,50070,13
+20059,Punta Tarde,CC->CW,CORONEL,13:57,,50220,50220,14
+20063,Punta Tarde,CC->CW,CONCEPCIÓN,14:35,14:35,52500,52500,0
+20063,Punta Tarde,CC->CW,Juan Pablo II,14:40,14:41,52840,52870,1
+20063,Punta Tarde,CC->CW,Diagonal Bio Bio,14:43,14:43,53015,53035,2
+20063,Punta Tarde,CC->CW,Alborada,14:46,14:46,53185,53205,3
+20063,Punta Tarde,CC->CW,Costa Mar,14:48,14:48,53300,53325,4
+20063,Punta Tarde,CC->CW,El Parque,14:51,14:51,53460,53480,5
+20063,Punta Tarde,CC->CW,LOMAS COLORADAS,14:53,14:54,53625,53655,6
+20063,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,14:56,14:57,53810,53830,7
+20063,Punta Tarde,CC->CW,Hito Galvarino,15:03,15:03,54180,54200,8
+20063,Punta Tarde,CC->CW,Los Canelos,15:07,15:07,54420,54440,9
+20063,Punta Tarde,CC->CW,Huinca,15:09,15:09,54540,54560,10
+20063,Punta Tarde,CC->CW,Cristo Redentor,15:11,15:11,54680,54700,11
+20063,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),15:11,15:11,54700,54700,12
+20063,Punta Tarde,CC->CW,Laguna Quiñenco,15:14,15:14,54850,54870,13
+20063,Punta Tarde,CC->CW,CORONEL,15:17,,55020,55020,14
+20065,Punta Tarde,CC->CW,CONCEPCIÓN,15:15,15:15,54900,54900,0
+20065,Punta Tarde,CC->CW,Juan Pablo II,15:20,15:21,55240,55270,1
+20065,Punta Tarde,CC->CW,Diagonal Bio Bio,15:23,15:23,55415,55435,2
+20065,Punta Tarde,CC->CW,Alborada,15:26,15:26,55585,55605,3
+20065,Punta Tarde,CC->CW,Costa Mar,15:28,15:28,55700,55725,4
+20065,Punta Tarde,CC->CW,El Parque,15:31,15:31,55860,55880,5
+20065,Punta Tarde,CC->CW,LOMAS COLORADAS,15:33,15:34,56025,56055,6
+20065,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,15:36,15:37,56210,56230,7
+20065,Punta Tarde,CC->CW,Hito Galvarino,15:43,15:43,56580,56600,8
+20065,Punta Tarde,CC->CW,Los Canelos,15:47,15:47,56820,56840,9
+20065,Punta Tarde,CC->CW,Huinca,15:49,15:49,56940,56960,10
+20065,Punta Tarde,CC->CW,Cristo Redentor,15:51,15:51,57080,57100,11
+20065,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),15:51,15:51,57100,57100,12
+20065,Punta Tarde,CC->CW,Laguna Quiñenco,15:54,15:54,57250,57270,13
+20065,Punta Tarde,CC->CW,CORONEL,15:57,,57420,57420,14
+20067,Punta Tarde,CC->CW,CONCEPCIÓN,15:30,15:30,55800,55800,0
+20067,Punta Tarde,CC->CW,Juan Pablo II,15:35,15:36,56140,56170,1
+20067,Punta Tarde,CC->CW,Diagonal Bio Bio,15:38,15:38,56315,56335,2
+20067,Punta Tarde,CC->CW,Alborada,15:41,15:41,56485,56505,3
+20067,Punta Tarde,CC->CW,Costa Mar,15:43,15:43,56600,56625,4
+20067,Punta Tarde,CC->CW,El Parque,15:46,15:46,56760,56780,5
+20067,Punta Tarde,CC->CW,LOMAS COLORADAS,15:48,15:49,56925,56955,6
+20067,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,15:51,15:52,57110,57130,7
+20067,Punta Tarde,CC->CW,Hito Galvarino,15:58,15:58,57480,57500,8
+20067,Punta Tarde,CC->CW,Los Canelos,16:02,16:02,57720,57740,9
+20067,Punta Tarde,CC->CW,Huinca,16:04,16:04,57840,57860,10
+20067,Punta Tarde,CC->CW,Cristo Redentor,16:06,16:06,57980,58000,11
+20067,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),16:06,16:06,58000,58000,12
+20067,Punta Tarde,CC->CW,Laguna Quiñenco,16:09,16:09,58150,58170,13
+20067,Punta Tarde,CC->CW,CORONEL,16:12,,58320,58320,14
+20069,Punta Tarde,CC->CW,CONCEPCIÓN,16:20,16:20,58800,58800,0
+20069,Punta Tarde,CC->CW,Juan Pablo II,16:25,16:26,59140,59170,1
+20069,Punta Tarde,CC->CW,Diagonal Bio Bio,16:28,16:28,59315,59335,2
+20069,Punta Tarde,CC->CW,Alborada,16:31,16:31,59485,59505,3
+20069,Punta Tarde,CC->CW,Costa Mar,16:33,16:33,59600,59625,4
+20069,Punta Tarde,CC->CW,El Parque,16:36,16:36,59760,59780,5
+20069,Punta Tarde,CC->CW,LOMAS COLORADAS,16:38,16:39,59925,59955,6
+20069,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,16:41,16:42,60110,60130,7
+20069,Punta Tarde,CC->CW,Hito Galvarino,16:48,16:48,60480,60500,8
+20069,Punta Tarde,CC->CW,Los Canelos,16:52,16:52,60720,60740,9
+20069,Punta Tarde,CC->CW,Huinca,16:54,16:54,60840,60860,10
+20069,Punta Tarde,CC->CW,Cristo Redentor,16:56,16:56,60980,61000,11
+20069,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),16:56,16:56,61000,61000,12
+20069,Punta Tarde,CC->CW,Laguna Quiñenco,16:59,16:59,61150,61170,13
+20069,Punta Tarde,CC->CW,CORONEL,17:02,,61320,61320,14
+20071,Punta Tarde,CC->CW,CONCEPCIÓN,16:40,16:40,60000,60000,0
+20071,Punta Tarde,CC->CW,Juan Pablo II,16:45,16:46,60340,60370,1
+20071,Punta Tarde,CC->CW,Diagonal Bio Bio,16:48,16:48,60515,60535,2
+20071,Punta Tarde,CC->CW,Alborada,16:51,16:51,60685,60705,3
+20071,Punta Tarde,CC->CW,Costa Mar,16:53,16:53,60800,60825,4
+20071,Punta Tarde,CC->CW,El Parque,16:56,16:56,60960,60980,5
+20071,Punta Tarde,CC->CW,LOMAS COLORADAS,16:58,16:59,61125,61155,6
+20071,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,17:01,17:02,61310,61330,7
+20071,Punta Tarde,CC->CW,Hito Galvarino,17:08,17:08,61680,61700,8
+20071,Punta Tarde,CC->CW,Los Canelos,17:12,17:12,61920,61940,9
+20071,Punta Tarde,CC->CW,Huinca,17:14,17:14,62040,62060,10
+20071,Punta Tarde,CC->CW,Cristo Redentor,17:16,17:16,62180,62200,11
+20071,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),17:16,17:16,62200,62200,12
+20071,Punta Tarde,CC->CW,Laguna Quiñenco,17:19,17:19,62350,62370,13
+20071,Punta Tarde,CC->CW,CORONEL,17:22,,62520,62520,14
+20073,Punta Tarde,CC->CW,CONCEPCIÓN,16:55,16:55,60900,60900,0
+20073,Punta Tarde,CC->CW,Juan Pablo II,17:00,17:01,61240,61270,1
+20073,Punta Tarde,CC->CW,Diagonal Bio Bio,17:03,17:03,61415,61435,2
+20073,Punta Tarde,CC->CW,Alborada,17:06,17:06,61585,61605,3
+20073,Punta Tarde,CC->CW,Costa Mar,17:08,17:08,61700,61725,4
+20073,Punta Tarde,CC->CW,El Parque,17:11,17:11,61860,61880,5
+20073,Punta Tarde,CC->CW,LOMAS COLORADAS,17:13,17:14,62025,62055,6
+20073,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,17:16,17:17,62210,62230,7
+20073,Punta Tarde,CC->CW,Hito Galvarino,17:23,17:23,62580,62600,8
+20073,Punta Tarde,CC->CW,Los Canelos,17:27,17:27,62820,62840,9
+20073,Punta Tarde,CC->CW,Huinca,17:29,17:29,62940,62960,10
+20073,Punta Tarde,CC->CW,Cristo Redentor,17:31,17:31,63080,63100,11
+20073,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),17:31,17:31,63100,63100,12
+20073,Punta Tarde,CC->CW,Laguna Quiñenco,17:34,17:34,63250,63270,13
+20073,Punta Tarde,CC->CW,CORONEL,17:37,,63420,63420,14
+20075,Punta Tarde,CC->CW,CONCEPCIÓN,17:12,17:12,61920,61920,0
+20075,Punta Tarde,CC->CW,Juan Pablo II,17:17,17:18,62260,62290,1
+20075,Punta Tarde,CC->CW,Diagonal Bio Bio,17:20,17:20,62435,62455,2
+20075,Punta Tarde,CC->CW,Alborada,17:23,17:23,62605,62625,3
+20075,Punta Tarde,CC->CW,Costa Mar,17:25,17:25,62720,62745,4
+20075,Punta Tarde,CC->CW,El Parque,17:28,17:28,62880,62900,5
+20075,Punta Tarde,CC->CW,LOMAS COLORADAS,17:30,17:31,63045,63075,6
+20075,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,17:33,17:34,63230,63250,7
+20075,Punta Tarde,CC->CW,Hito Galvarino,17:40,17:40,63600,63620,8
+20075,Punta Tarde,CC->CW,Los Canelos,17:44,17:44,63840,63860,9
+20075,Punta Tarde,CC->CW,Huinca,17:46,17:46,63960,63980,10
+20075,Punta Tarde,CC->CW,Cristo Redentor,17:48,17:48,64100,64120,11
+20075,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),17:48,17:48,64120,64120,12
+20075,Punta Tarde,CC->CW,Laguna Quiñenco,17:51,17:51,64270,64290,13
+20075,Punta Tarde,CC->CW,CORONEL,17:54,,64440,64440,14
+20077,Punta Tarde,CC->CW,CONCEPCIÓN,17:24,17:24,62640,62640,0
+20077,Punta Tarde,CC->CW,Juan Pablo II,17:29,17:30,62980,63010,1
+20077,Punta Tarde,CC->CW,Diagonal Bio Bio,17:32,17:32,63155,63175,2
+20077,Punta Tarde,CC->CW,Alborada,17:35,17:35,63325,63345,3
+20077,Punta Tarde,CC->CW,Costa Mar,17:37,17:37,63440,63465,4
+20077,Punta Tarde,CC->CW,El Parque,17:40,17:40,63600,63620,5
+20077,Punta Tarde,CC->CW,LOMAS COLORADAS,17:42,17:43,63765,63795,6
+20077,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,17:45,17:46,63950,63970,7
+20077,Punta Tarde,CC->CW,Hito Galvarino,17:52,17:52,64320,64340,8
+20077,Punta Tarde,CC->CW,Los Canelos,17:56,17:56,64560,64580,9
+20077,Punta Tarde,CC->CW,Huinca,17:58,17:58,64680,64700,10
+20077,Punta Tarde,CC->CW,Cristo Redentor,18:00,18:00,64820,64840,11
+20077,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),18:00,18:00,64840,64840,12
+20077,Punta Tarde,CC->CW,Laguna Quiñenco,18:03,18:03,64990,65010,13
+20077,Punta Tarde,CC->CW,CORONEL,18:06,,65160,65160,14
+20079,Punta Tarde,CC->CW,CONCEPCIÓN,17:36,17:36,63360,63360,0
+20079,Punta Tarde,CC->CW,Juan Pablo II,17:41,17:42,63700,63730,1
+20079,Punta Tarde,CC->CW,Diagonal Bio Bio,17:44,17:44,63875,63895,2
+20079,Punta Tarde,CC->CW,Alborada,17:47,17:47,64045,64065,3
+20079,Punta Tarde,CC->CW,Costa Mar,17:49,17:49,64160,64185,4
+20079,Punta Tarde,CC->CW,El Parque,17:52,17:52,64320,64340,5
+20079,Punta Tarde,CC->CW,LOMAS COLORADAS,17:54,17:55,64485,64515,6
+20079,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,17:57,17:58,64670,64690,7
+20079,Punta Tarde,CC->CW,Hito Galvarino,18:04,18:04,65040,65060,8
+20079,Punta Tarde,CC->CW,Los Canelos,18:08,18:08,65280,65300,9
+20079,Punta Tarde,CC->CW,Huinca,18:10,18:10,65400,65420,10
+20079,Punta Tarde,CC->CW,Cristo Redentor,18:12,18:12,65540,65560,11
+20079,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),18:12,18:12,65560,65560,12
+20079,Punta Tarde,CC->CW,Laguna Quiñenco,18:15,18:15,65710,65730,13
+20079,Punta Tarde,CC->CW,CORONEL,18:18,,65880,65880,14
+20083,Punta Tarde,CC->CW,CONCEPCIÓN,17:48,17:48,64080,64080,0
+20083,Punta Tarde,CC->CW,Juan Pablo II,17:53,17:54,64420,64450,1
+20083,Punta Tarde,CC->CW,Diagonal Bio Bio,17:56,17:56,64595,64615,2
+20083,Punta Tarde,CC->CW,Alborada,17:59,17:59,64765,64785,3
+20083,Punta Tarde,CC->CW,Costa Mar,18:01,18:01,64880,64905,4
+20083,Punta Tarde,CC->CW,El Parque,18:04,18:04,65040,65060,5
+20083,Punta Tarde,CC->CW,LOMAS COLORADAS,18:06,18:07,65205,65235,6
+20083,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,18:09,18:10,65390,65410,7
+20083,Punta Tarde,CC->CW,Hito Galvarino,18:16,18:16,65760,65780,8
+20083,Punta Tarde,CC->CW,Los Canelos,18:20,18:20,66000,66020,9
+20083,Punta Tarde,CC->CW,Huinca,18:22,18:22,66120,66140,10
+20083,Punta Tarde,CC->CW,Cristo Redentor,18:24,18:24,66260,66280,11
+20083,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),18:24,18:24,66280,66280,12
+20083,Punta Tarde,CC->CW,Laguna Quiñenco,18:27,18:27,66430,66450,13
+20083,Punta Tarde,CC->CW,CORONEL,18:30,,66600,66600,14
+20085,Punta Tarde,CC->CW,CONCEPCIÓN,18:00,18:00,64800,64800,0
+20085,Punta Tarde,CC->CW,Juan Pablo II,18:05,18:06,65140,65170,1
+20085,Punta Tarde,CC->CW,Diagonal Bio Bio,18:08,18:08,65315,65335,2
+20085,Punta Tarde,CC->CW,Alborada,18:11,18:11,65485,65505,3
+20085,Punta Tarde,CC->CW,Costa Mar,18:13,18:13,65600,65625,4
+20085,Punta Tarde,CC->CW,El Parque,18:16,18:16,65760,65780,5
+20085,Punta Tarde,CC->CW,LOMAS COLORADAS,18:18,18:19,65925,65955,6
+20085,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,18:21,18:22,66110,66130,7
+20085,Punta Tarde,CC->CW,Hito Galvarino,18:28,18:28,66480,66500,8
+20085,Punta Tarde,CC->CW,Los Canelos,18:32,18:32,66720,66740,9
+20085,Punta Tarde,CC->CW,Huinca,18:34,18:34,66840,66860,10
+20085,Punta Tarde,CC->CW,Cristo Redentor,18:36,18:36,66980,67000,11
+20085,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),18:36,18:36,67000,67000,12
+20085,Punta Tarde,CC->CW,Laguna Quiñenco,18:39,18:39,67150,67170,13
+20085,Punta Tarde,CC->CW,CORONEL,18:42,,67320,67320,14
+20087,Punta Tarde,CC->CW,CONCEPCIÓN,18:12,18:12,65520,65520,0
+20087,Punta Tarde,CC->CW,Juan Pablo II,18:17,18:18,65860,65890,1
+20087,Punta Tarde,CC->CW,Diagonal Bio Bio,18:20,18:20,66035,66055,2
+20087,Punta Tarde,CC->CW,Alborada,18:23,18:23,66205,66225,3
+20087,Punta Tarde,CC->CW,Costa Mar,18:25,18:25,66320,66345,4
+20087,Punta Tarde,CC->CW,El Parque,18:28,18:28,66480,66500,5
+20087,Punta Tarde,CC->CW,LOMAS COLORADAS,18:30,18:31,66645,66675,6
+20087,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,18:33,18:34,66830,66850,7
+20087,Punta Tarde,CC->CW,Hito Galvarino,18:40,18:40,67200,67220,8
+20087,Punta Tarde,CC->CW,Los Canelos,18:44,18:44,67440,67460,9
+20087,Punta Tarde,CC->CW,Huinca,18:46,18:46,67560,67580,10
+20087,Punta Tarde,CC->CW,Cristo Redentor,18:48,18:48,67700,67720,11
+20087,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),18:48,18:48,67720,67720,12
+20087,Punta Tarde,CC->CW,Laguna Quiñenco,18:51,18:51,67870,67890,13
+20087,Punta Tarde,CC->CW,CORONEL,18:54,,68040,68040,14
+20089,Punta Tarde,CC->CW,CONCEPCIÓN,18:24,18:24,66240,66240,0
+20089,Punta Tarde,CC->CW,Juan Pablo II,18:29,18:30,66580,66610,1
+20089,Punta Tarde,CC->CW,Diagonal Bio Bio,18:32,18:32,66755,66775,2
+20089,Punta Tarde,CC->CW,Alborada,18:35,18:35,66925,66945,3
+20089,Punta Tarde,CC->CW,Costa Mar,18:37,18:37,67040,67065,4
+20089,Punta Tarde,CC->CW,El Parque,18:40,18:40,67200,67220,5
+20089,Punta Tarde,CC->CW,LOMAS COLORADAS,18:42,18:43,67365,67395,6
+20089,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,18:45,18:46,67550,67570,7
+20089,Punta Tarde,CC->CW,Hito Galvarino,18:52,18:52,67920,67940,8
+20089,Punta Tarde,CC->CW,Los Canelos,18:56,18:56,68160,68180,9
+20089,Punta Tarde,CC->CW,Huinca,18:58,18:58,68280,68300,10
+20089,Punta Tarde,CC->CW,Cristo Redentor,19:00,19:00,68420,68440,11
+20089,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),19:00,19:00,68440,68440,12
+20089,Punta Tarde,CC->CW,Laguna Quiñenco,19:03,19:03,68590,68610,13
+20089,Punta Tarde,CC->CW,CORONEL,19:06,,68760,68760,14
+20091,Punta Tarde,CC->CW,CONCEPCIÓN,18:36,18:36,66960,66960,0
+20091,Punta Tarde,CC->CW,Juan Pablo II,18:41,18:42,67300,67330,1
+20091,Punta Tarde,CC->CW,Diagonal Bio Bio,18:44,18:44,67475,67495,2
+20091,Punta Tarde,CC->CW,Alborada,18:47,18:47,67645,67665,3
+20091,Punta Tarde,CC->CW,Costa Mar,18:49,18:49,67760,67785,4
+20091,Punta Tarde,CC->CW,El Parque,18:52,18:52,67920,67940,5
+20091,Punta Tarde,CC->CW,LOMAS COLORADAS,18:54,18:55,68085,68115,6
+20091,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,18:57,18:58,68270,68290,7
+20091,Punta Tarde,CC->CW,Hito Galvarino,19:04,19:04,68640,68660,8
+20091,Punta Tarde,CC->CW,Los Canelos,19:08,19:08,68880,68900,9
+20091,Punta Tarde,CC->CW,Huinca,19:10,19:10,69000,69020,10
+20091,Punta Tarde,CC->CW,Cristo Redentor,19:12,19:12,69140,69160,11
+20091,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),19:12,19:12,69160,69160,12
+20091,Punta Tarde,CC->CW,Laguna Quiñenco,19:15,19:15,69310,69330,13
+20091,Punta Tarde,CC->CW,CORONEL,19:18,,69480,69480,14
+20093,Punta Tarde,CC->CW,CONCEPCIÓN,18:48,18:48,67680,67680,0
+20093,Punta Tarde,CC->CW,Juan Pablo II,18:53,18:54,68020,68050,1
+20093,Punta Tarde,CC->CW,Diagonal Bio Bio,18:56,18:56,68195,68215,2
+20093,Punta Tarde,CC->CW,Alborada,18:59,18:59,68365,68385,3
+20093,Punta Tarde,CC->CW,Costa Mar,19:01,19:01,68480,68505,4
+20093,Punta Tarde,CC->CW,El Parque,19:04,19:04,68640,68660,5
+20093,Punta Tarde,CC->CW,LOMAS COLORADAS,19:06,19:07,68805,68835,6
+20093,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,19:09,19:10,68990,69010,7
+20093,Punta Tarde,CC->CW,Hito Galvarino,19:16,19:16,69360,69380,8
+20093,Punta Tarde,CC->CW,Los Canelos,19:20,19:20,69600,69620,9
+20093,Punta Tarde,CC->CW,Huinca,19:22,19:22,69720,69740,10
+20093,Punta Tarde,CC->CW,Cristo Redentor,19:24,19:24,69860,69880,11
+20093,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),19:24,19:24,69880,69880,12
+20093,Punta Tarde,CC->CW,Laguna Quiñenco,19:27,19:27,70030,70050,13
+20093,Punta Tarde,CC->CW,CORONEL,19:30,,70200,70200,14
+20095,Punta Tarde,CC->CW,CONCEPCIÓN,19:00,19:00,68400,68400,0
+20095,Punta Tarde,CC->CW,Juan Pablo II,19:05,19:06,68740,68770,1
+20095,Punta Tarde,CC->CW,Diagonal Bio Bio,19:08,19:08,68915,68935,2
+20095,Punta Tarde,CC->CW,Alborada,19:11,19:11,69085,69105,3
+20095,Punta Tarde,CC->CW,Costa Mar,19:13,19:13,69200,69225,4
+20095,Punta Tarde,CC->CW,El Parque,19:16,19:16,69360,69380,5
+20095,Punta Tarde,CC->CW,LOMAS COLORADAS,19:18,19:19,69525,69555,6
+20095,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,19:21,19:22,69710,69730,7
+20095,Punta Tarde,CC->CW,Hito Galvarino,19:28,19:28,70080,70100,8
+20095,Punta Tarde,CC->CW,Los Canelos,19:32,19:32,70320,70340,9
+20095,Punta Tarde,CC->CW,Huinca,19:34,19:34,70440,70460,10
+20095,Punta Tarde,CC->CW,Cristo Redentor,19:36,19:36,70580,70600,11
+20095,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),19:36,19:36,70600,70600,12
+20095,Punta Tarde,CC->CW,Laguna Quiñenco,19:39,19:39,70750,70770,13
+20095,Punta Tarde,CC->CW,CORONEL,19:42,,70920,70920,14
+20097,Punta Tarde,CC->CW,CONCEPCIÓN,19:10,19:10,69000,69000,0
+20097,Punta Tarde,CC->CW,Juan Pablo II,19:15,19:16,69340,69370,1
+20097,Punta Tarde,CC->CW,Diagonal Bio Bio,19:18,19:18,69515,69535,2
+20097,Punta Tarde,CC->CW,Alborada,19:21,19:21,69685,69705,3
+20097,Punta Tarde,CC->CW,Costa Mar,19:23,19:23,69800,69825,4
+20097,Punta Tarde,CC->CW,El Parque,19:26,19:26,69960,69980,5
+20097,Punta Tarde,CC->CW,LOMAS COLORADAS,19:28,19:29,70125,70155,6
+20097,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,19:31,19:32,70310,70330,7
+20097,Punta Tarde,CC->CW,Hito Galvarino,19:38,19:38,70680,70700,8
+20097,Punta Tarde,CC->CW,Los Canelos,19:42,19:42,70920,70940,9
+20097,Punta Tarde,CC->CW,Huinca,19:44,19:44,71040,71060,10
+20097,Punta Tarde,CC->CW,Cristo Redentor,19:46,19:46,71180,71200,11
+20097,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),19:46,19:46,71200,71200,12
+20097,Punta Tarde,CC->CW,Laguna Quiñenco,19:49,19:49,71350,71370,13
+20097,Punta Tarde,CC->CW,CORONEL,19:52,,71520,71520,14
+20099,Punta Tarde,CC->CW,CONCEPCIÓN,19:17,19:17,69420,69420,0
+20099,Punta Tarde,CC->CW,Juan Pablo II,19:22,19:23,69760,69790,1
+20099,Punta Tarde,CC->CW,Diagonal Bio Bio,19:25,19:25,69935,69955,2
+20099,Punta Tarde,CC->CW,Alborada,19:28,19:28,70105,70125,3
+20099,Punta Tarde,CC->CW,Costa Mar,19:30,19:30,70220,70245,4
+20099,Punta Tarde,CC->CW,El Parque,19:33,19:33,70380,70400,5
+20099,Punta Tarde,CC->CW,LOMAS COLORADAS,19:35,19:36,70545,70575,6
+20099,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,19:38,19:39,70730,70750,7
+20099,Punta Tarde,CC->CW,Hito Galvarino,19:45,19:45,71100,71120,8
+20099,Punta Tarde,CC->CW,Los Canelos,19:49,19:49,71340,71360,9
+20099,Punta Tarde,CC->CW,Huinca,19:51,19:51,71460,71480,10
+20099,Punta Tarde,CC->CW,Cristo Redentor,19:53,19:53,71600,71620,11
+20099,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),19:53,19:53,71620,71620,12
+20099,Punta Tarde,CC->CW,Laguna Quiñenco,19:56,19:56,71770,71790,13
+20099,Punta Tarde,CC->CW,CORONEL,19:59,,71940,71940,14
+20101,Punta Tarde,CC->CW,CONCEPCIÓN,19:30,19:30,70200,70200,0
+20101,Punta Tarde,CC->CW,Juan Pablo II,19:35,19:36,70540,70570,1
+20101,Punta Tarde,CC->CW,Diagonal Bio Bio,19:38,19:38,70715,70735,2
+20101,Punta Tarde,CC->CW,Alborada,19:41,19:41,70885,70905,3
+20101,Punta Tarde,CC->CW,Costa Mar,19:43,19:43,71000,71025,4
+20101,Punta Tarde,CC->CW,El Parque,19:46,19:46,71160,71180,5
+20101,Punta Tarde,CC->CW,LOMAS COLORADAS,19:48,19:49,71325,71355,6
+20101,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,19:51,19:52,71510,71530,7
+20101,Punta Tarde,CC->CW,Hito Galvarino,19:58,19:58,71880,71900,8
+20101,Punta Tarde,CC->CW,Los Canelos,20:02,20:02,72120,72140,9
+20101,Punta Tarde,CC->CW,Huinca,20:04,20:04,72240,72260,10
+20101,Punta Tarde,CC->CW,Cristo Redentor,20:06,20:06,72380,72400,11
+20101,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),20:06,20:06,72400,72400,12
+20101,Punta Tarde,CC->CW,Laguna Quiñenco,20:09,20:09,72550,72570,13
+20101,Punta Tarde,CC->CW,CORONEL,20:12,,72720,72720,14
+20105,Punta Tarde,CC->CW,CONCEPCIÓN,19:45,19:45,71100,71100,0
+20105,Punta Tarde,CC->CW,Juan Pablo II,19:50,19:51,71440,71470,1
+20105,Punta Tarde,CC->CW,Diagonal Bio Bio,19:53,19:53,71615,71635,2
+20105,Punta Tarde,CC->CW,Alborada,19:56,19:56,71785,71805,3
+20105,Punta Tarde,CC->CW,Costa Mar,19:58,19:58,71900,71925,4
+20105,Punta Tarde,CC->CW,El Parque,20:01,20:01,72060,72080,5
+20105,Punta Tarde,CC->CW,LOMAS COLORADAS,20:03,20:04,72225,72255,6
+20105,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,20:06,20:07,72410,72430,7
+20105,Punta Tarde,CC->CW,Hito Galvarino,20:13,20:13,72780,72800,8
+20105,Punta Tarde,CC->CW,Los Canelos,20:17,20:17,73020,73040,9
+20105,Punta Tarde,CC->CW,Huinca,20:19,20:19,73140,73160,10
+20105,Punta Tarde,CC->CW,Cristo Redentor,20:21,20:21,73280,73300,11
+20105,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),20:21,20:21,73300,73300,12
+20105,Punta Tarde,CC->CW,Laguna Quiñenco,20:24,20:24,73450,73470,13
+20105,Punta Tarde,CC->CW,CORONEL,20:27,,73620,73620,14
+20107,Punta Tarde,CC->CW,CONCEPCIÓN,20:00,20:00,72000,72000,0
+20107,Punta Tarde,CC->CW,Juan Pablo II,20:05,20:06,72340,72370,1
+20107,Punta Tarde,CC->CW,Diagonal Bio Bio,20:08,20:08,72515,72535,2
+20107,Punta Tarde,CC->CW,Alborada,20:11,20:11,72685,72705,3
+20107,Punta Tarde,CC->CW,Costa Mar,20:13,20:13,72800,72825,4
+20107,Punta Tarde,CC->CW,El Parque,20:16,20:16,72960,72980,5
+20107,Punta Tarde,CC->CW,LOMAS COLORADAS,20:18,20:19,73125,73155,6
+20107,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,20:21,20:22,73310,73330,7
+20107,Punta Tarde,CC->CW,Hito Galvarino,20:28,20:28,73680,73700,8
+20107,Punta Tarde,CC->CW,Los Canelos,20:32,20:32,73920,73940,9
+20107,Punta Tarde,CC->CW,Huinca,20:34,20:34,74040,74060,10
+20107,Punta Tarde,CC->CW,Cristo Redentor,20:36,20:36,74180,74200,11
+20107,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),20:36,20:36,74200,74200,12
+20107,Punta Tarde,CC->CW,Laguna Quiñenco,20:39,20:39,74350,74370,13
+20107,Punta Tarde,CC->CW,CORONEL,20:42,,74520,74520,14
+20109,Punta Tarde,CC->CW,CONCEPCIÓN,20:15,20:15,72900,72900,0
+20109,Punta Tarde,CC->CW,Juan Pablo II,20:20,20:21,73240,73270,1
+20109,Punta Tarde,CC->CW,Diagonal Bio Bio,20:23,20:23,73415,73435,2
+20109,Punta Tarde,CC->CW,Alborada,20:26,20:26,73585,73605,3
+20109,Punta Tarde,CC->CW,Costa Mar,20:28,20:28,73700,73725,4
+20109,Punta Tarde,CC->CW,El Parque,20:31,20:31,73860,73880,5
+20109,Punta Tarde,CC->CW,LOMAS COLORADAS,20:33,20:34,74025,74055,6
+20109,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,20:36,20:37,74210,74230,7
+20109,Punta Tarde,CC->CW,Hito Galvarino,20:43,20:43,74580,74600,8
+20109,Punta Tarde,CC->CW,Los Canelos,20:47,20:47,74820,74840,9
+20109,Punta Tarde,CC->CW,Huinca,20:49,20:49,74940,74960,10
+20109,Punta Tarde,CC->CW,Cristo Redentor,20:51,20:51,75080,75100,11
+20109,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),20:51,20:51,75100,75100,12
+20109,Punta Tarde,CC->CW,Laguna Quiñenco,20:54,20:54,75250,75270,13
+20109,Punta Tarde,CC->CW,CORONEL,20:57,,75420,75420,14
+20111,Punta Tarde,CC->CW,CONCEPCIÓN,20:30,20:30,73800,73800,0
+20111,Punta Tarde,CC->CW,Juan Pablo II,20:35,20:36,74140,74170,1
+20111,Punta Tarde,CC->CW,Diagonal Bio Bio,20:38,20:38,74315,74335,2
+20111,Punta Tarde,CC->CW,Alborada,20:41,20:41,74485,74505,3
+20111,Punta Tarde,CC->CW,Costa Mar,20:43,20:43,74600,74625,4
+20111,Punta Tarde,CC->CW,El Parque,20:46,20:46,74760,74780,5
+20111,Punta Tarde,CC->CW,LOMAS COLORADAS,20:48,20:49,74925,74955,6
+20111,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,20:51,20:52,75110,75130,7
+20111,Punta Tarde,CC->CW,Hito Galvarino,20:58,20:58,75480,75500,8
+20111,Punta Tarde,CC->CW,Los Canelos,21:02,21:02,75720,75740,9
+20111,Punta Tarde,CC->CW,Huinca,21:04,21:04,75840,75860,10
+20111,Punta Tarde,CC->CW,Cristo Redentor,21:06,21:06,75980,76000,11
+20111,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),21:06,21:06,76000,76000,12
+20111,Punta Tarde,CC->CW,Laguna Quiñenco,21:09,21:09,76150,76170,13
+20111,Punta Tarde,CC->CW,CORONEL,21:12,,76320,76320,14
+20113,Punta Tarde,CC->CW,CONCEPCIÓN,20:45,20:45,74700,74700,0
+20113,Punta Tarde,CC->CW,Juan Pablo II,20:50,20:51,75040,75070,1
+20113,Punta Tarde,CC->CW,Diagonal Bio Bio,20:53,20:53,75215,75235,2
+20113,Punta Tarde,CC->CW,Alborada,20:56,20:56,75385,75405,3
+20113,Punta Tarde,CC->CW,Costa Mar,20:58,20:58,75500,75525,4
+20113,Punta Tarde,CC->CW,El Parque,21:01,21:01,75660,75680,5
+20113,Punta Tarde,CC->CW,LOMAS COLORADAS,21:03,21:04,75825,75855,6
+20113,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,21:06,21:07,76010,76030,7
+20113,Punta Tarde,CC->CW,Hito Galvarino,21:13,21:13,76380,76400,8
+20113,Punta Tarde,CC->CW,Los Canelos,21:17,21:17,76620,76640,9
+20113,Punta Tarde,CC->CW,Huinca,21:19,21:19,76740,76760,10
+20113,Punta Tarde,CC->CW,Cristo Redentor,21:21,21:21,76880,76900,11
+20113,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),21:21,21:21,76900,76900,12
+20113,Punta Tarde,CC->CW,Laguna Quiñenco,21:24,21:24,77050,77070,13
+20113,Punta Tarde,CC->CW,CORONEL,21:27,,77220,77220,14
+20115,Punta Tarde,CC->CW,CONCEPCIÓN,21:00,21:00,75600,75600,0
+20115,Punta Tarde,CC->CW,Juan Pablo II,21:05,21:06,75940,75970,1
+20115,Punta Tarde,CC->CW,Diagonal Bio Bio,21:08,21:08,76115,76135,2
+20115,Punta Tarde,CC->CW,Alborada,21:11,21:11,76285,76305,3
+20115,Punta Tarde,CC->CW,Costa Mar,21:13,21:13,76400,76425,4
+20115,Punta Tarde,CC->CW,El Parque,21:16,21:16,76560,76580,5
+20115,Punta Tarde,CC->CW,LOMAS COLORADAS,21:18,21:19,76725,76755,6
+20115,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,21:21,21:22,76910,76930,7
+20115,Punta Tarde,CC->CW,Hito Galvarino,21:28,21:28,77280,77300,8
+20115,Punta Tarde,CC->CW,Los Canelos,21:32,21:32,77520,77540,9
+20115,Punta Tarde,CC->CW,Huinca,21:34,21:34,77640,77660,10
+20115,Punta Tarde,CC->CW,Cristo Redentor,21:36,21:36,77780,77800,11
+20115,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),21:36,21:36,77800,77800,12
+20115,Punta Tarde,CC->CW,Laguna Quiñenco,21:39,21:39,77950,77970,13
+20115,Punta Tarde,CC->CW,CORONEL,21:42,,78120,78120,14
+20117,Punta Tarde,CC->CW,CONCEPCIÓN,21:15,21:15,76500,76500,0
+20117,Punta Tarde,CC->CW,Juan Pablo II,21:20,21:21,76840,76870,1
+20117,Punta Tarde,CC->CW,Diagonal Bio Bio,21:23,21:23,77015,77035,2
+20117,Punta Tarde,CC->CW,Alborada,21:26,21:26,77185,77205,3
+20117,Punta Tarde,CC->CW,Costa Mar,21:28,21:28,77300,77325,4
+20117,Punta Tarde,CC->CW,El Parque,21:31,21:31,77460,77480,5
+20117,Punta Tarde,CC->CW,LOMAS COLORADAS,21:33,21:34,77625,77655,6
+20117,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,21:36,21:37,77810,77830,7
+20117,Punta Tarde,CC->CW,Hito Galvarino,21:43,21:43,78180,78200,8
+20117,Punta Tarde,CC->CW,Los Canelos,21:47,21:47,78420,78440,9
+20117,Punta Tarde,CC->CW,Huinca,21:49,21:49,78540,78560,10
+20117,Punta Tarde,CC->CW,Cristo Redentor,21:51,21:51,78680,78700,11
+20117,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),21:51,21:51,78700,78700,12
+20117,Punta Tarde,CC->CW,Laguna Quiñenco,21:54,21:54,78850,78870,13
+20117,Punta Tarde,CC->CW,CORONEL,21:57,,79020,79020,14
+20121,Punta Tarde,CC->CW,CONCEPCIÓN,21:30,21:30,77400,77400,0
+20121,Punta Tarde,CC->CW,Juan Pablo II,21:35,21:36,77740,77770,1
+20121,Punta Tarde,CC->CW,Diagonal Bio Bio,21:38,21:38,77915,77935,2
+20121,Punta Tarde,CC->CW,Alborada,21:41,21:41,78085,78105,3
+20121,Punta Tarde,CC->CW,Costa Mar,21:43,21:43,78200,78225,4
+20121,Punta Tarde,CC->CW,El Parque,21:46,21:46,78360,78380,5
+20121,Punta Tarde,CC->CW,LOMAS COLORADAS,21:48,21:49,78525,78555,6
+20121,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,21:51,21:52,78710,78730,7
+20121,Punta Tarde,CC->CW,Hito Galvarino,21:58,21:58,79080,79100,8
+20121,Punta Tarde,CC->CW,Los Canelos,22:02,22:02,79320,79340,9
+20121,Punta Tarde,CC->CW,Huinca,22:04,22:04,79440,79460,10
+20121,Punta Tarde,CC->CW,Cristo Redentor,22:06,22:06,79580,79600,11
+20121,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),22:06,22:06,79600,79600,12
+20121,Punta Tarde,CC->CW,Laguna Quiñenco,22:09,22:09,79750,79770,13
+20121,Punta Tarde,CC->CW,CORONEL,22:12,,79920,79920,14
+20123,Punta Tarde,CC->CW,CONCEPCIÓN,21:45,21:45,78300,78300,0
+20123,Punta Tarde,CC->CW,Juan Pablo II,21:50,21:51,78640,78670,1
+20123,Punta Tarde,CC->CW,Diagonal Bio Bio,21:53,21:53,78815,78835,2
+20123,Punta Tarde,CC->CW,Alborada,21:56,21:56,78985,79005,3
+20123,Punta Tarde,CC->CW,Costa Mar,21:58,21:58,79100,79125,4
+20123,Punta Tarde,CC->CW,El Parque,22:01,22:01,79260,79280,5
+20123,Punta Tarde,CC->CW,LOMAS COLORADAS,22:03,22:04,79425,79455,6
+20123,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,22:06,22:07,79610,79630,7
+20123,Punta Tarde,CC->CW,Hito Galvarino,22:13,22:13,79980,80000,8
+20123,Punta Tarde,CC->CW,Los Canelos,22:17,22:17,80220,80240,9
+20123,Punta Tarde,CC->CW,Huinca,22:19,22:19,80340,80360,10
+20123,Punta Tarde,CC->CW,Cristo Redentor,22:21,22:21,80480,80500,11
+20123,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),22:21,22:21,80500,80500,12
+20123,Punta Tarde,CC->CW,Laguna Quiñenco,22:24,22:24,80650,80670,13
+20123,Punta Tarde,CC->CW,CORONEL,22:27,,80820,80820,14
+20127,Punta Tarde,CC->CW,CONCEPCIÓN,22:25,22:25,80700,80700,0
+20127,Punta Tarde,CC->CW,Juan Pablo II,22:30,22:31,81040,81070,1
+20127,Punta Tarde,CC->CW,Diagonal Bio Bio,22:33,22:33,81215,81235,2
+20127,Punta Tarde,CC->CW,Alborada,22:36,22:36,81385,81405,3
+20127,Punta Tarde,CC->CW,Costa Mar,22:38,22:38,81500,81525,4
+20127,Punta Tarde,CC->CW,El Parque,22:41,22:41,81660,81680,5
+20127,Punta Tarde,CC->CW,LOMAS COLORADAS,22:43,22:44,81825,81855,6
+20127,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,22:46,22:47,82010,82030,7
+20127,Punta Tarde,CC->CW,Hito Galvarino,22:53,22:53,82380,82400,8
+20127,Punta Tarde,CC->CW,Los Canelos,22:57,22:57,82620,82640,9
+20127,Punta Tarde,CC->CW,Huinca,22:59,22:59,82740,82760,10
+20127,Punta Tarde,CC->CW,Cristo Redentor,23:01,23:01,82880,82900,11
+20127,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),23:01,23:01,82900,82900,12
+20127,Punta Tarde,CC->CW,Laguna Quiñenco,23:04,23:04,83050,83070,13
+20127,Punta Tarde,CC->CW,CORONEL,23:07,,83220,83220,14
+20129,Punta Tarde,CC->CW,CONCEPCIÓN,22:50,22:50,82200,82200,0
+20129,Punta Tarde,CC->CW,Juan Pablo II,22:55,22:56,82540,82570,1
+20129,Punta Tarde,CC->CW,Diagonal Bio Bio,22:58,22:58,82715,82735,2
+20129,Punta Tarde,CC->CW,Alborada,23:01,23:01,82885,82905,3
+20129,Punta Tarde,CC->CW,Costa Mar,23:03,23:03,83000,83025,4
+20129,Punta Tarde,CC->CW,El Parque,23:06,23:06,83160,83180,5
+20129,Punta Tarde,CC->CW,LOMAS COLORADAS,23:08,23:09,83325,83355,6
+20129,Punta Tarde,CC->CW,Card. Raúl Silva Henriquez,23:11,23:12,83510,83530,7
+20129,Punta Tarde,CC->CW,Hito Galvarino,23:18,23:18,83880,83900,8
+20129,Punta Tarde,CC->CW,Los Canelos,23:22,23:22,84120,84140,9
+20129,Punta Tarde,CC->CW,Huinca,23:24,23:24,84240,84260,10
+20129,Punta Tarde,CC->CW,Cristo Redentor,23:26,23:26,84380,84400,11
+20129,Punta Tarde,CC->CW,Desvío Lagunillas (HDLC),23:26,23:26,84400,84400,12
+20129,Punta Tarde,CC->CW,Laguna Quiñenco,23:29,23:29,84550,84570,13
+20129,Punta Tarde,CC->CW,CORONEL,23:32,,84720,84720,14

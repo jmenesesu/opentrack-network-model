@@ -1,0 +1,86 @@
+# Bitácora de intervención
+
+## 1. Encabezado
+- Fecha y hora: 17-06-2026, 16:40
+- Solicitud original: arreglar el error de la app desplegada (pestaña Grafo) y avanzar
+  hacia el modelo de optimización; como primer paso construir, a partir del itinerario
+  vigente en PDF, el diagrama de Marey del Biotren Concepción–Coronel e indicadores, y
+  mostrarlo en Streamlit. Línea elegida: Biotren Concepción–Coronel. Fuente de horarios:
+  parseo del PDF por Claude.
+- Archivos resultantes (carpeta opentrack-network-model):
+    - app/streamlit_app.py (reescrito: pestañas Red + Itinerario Marey)
+    - src/otnet/timetable_pdf.py (nuevo)
+    - src/otnet/marey.py (nuevo)
+    - scripts/parse_timetable.py (nuevo)
+    - data/timetable_cc_coronel.csv (nuevo)
+    - data/stations_cc_coronel.csv (nuevo)
+    - data/source_pdf/Circular_2-410_Itinerario_Concepcion_2026-03-30.pdf (copia del insumo)
+    - marey_preview.png (vista previa generada para revisión)
+    - bitacora_marey-biotren_2026-06-17.txt (este archivo)
+- Archivo de entrada: "2-410. Itinerario Pasajeros Concepción 30-mar-2026.pdf" (Circular EFE Sur).
+
+## 2. Resumen ejecutivo
+Corregí el error de la pestaña Grafo (dependía de scipy vía kamada_kawai_layout) cambiando
+a spring_layout. Parseé del PDF la malla Biotren Concepción->Coronel (páginas 2-6),
+reconstruí el horario completo por estación (53 trenes Lun-Vie) y construí el diagrama de
+Marey y los indicadores, integrados en una nueva pestaña de la app Streamlit. La
+reconstrucción se validó contra las llegadas publicadas a Coronel (coinciden al minuto).
+
+## 3. Detalle de cambios (paso a paso)
+1. app/streamlit_app.py: cambié nx.kamada_kawai_layout por nx.spring_layout(seed=42, k=0.6,
+   iterations=200) para no depender de scipy (causa del ModuleNotFoundError en la nube).
+   Luego reescribí la app con dos pestañas: "Red (infraestructura)" e "Itinerario Biotren
+   (Marey)".
+2. Analicé la estructura del PDF (22 páginas): páginas 2-10 = sector Concepción-Coronel
+   (cada página con ambos sentidos apilados), 11-15 = Laja-Talcahuano, 16-22 = rotaciones y
+   estacionamientos. El sector CC->Coronel Lun-Vie está en páginas 2-6 (PM/Valle y Punta Tarde).
+3. Creé src/otnet/timetable_pdf.py: con pdfplumber, detecta por página la fila de encabezado
+   de trenes, las filas de estación, y las columnas "Tiempo de Viaje" (marcha por tramo) y
+   "Detención" (dwell). Extrae la salida de origen de cada tren y reconstruye:
+       llegada[k] = salida_origen + Σ marcha[1..k] + Σ dwell[1..k-1]; salida[k]=llegada[k]+dwell[k].
+4. Creé scripts/parse_timetable.py: genera data/timetable_cc_coronel.csv (horario largo) y
+   data/stations_cc_coronel.csv (secuencia con marcha, dwell y posición acumulada).
+5. Creé src/otnet/marey.py: marey_figure() (diagrama tiempo vs posición, color por período),
+   kpis() (trenes, tiempo de viaje, headway por período) y headway_table().
+6. Integré la pestaña Marey en la app: KPIs, filtro de períodos, diagrama y tablas.
+7. Copié el PDF a data/source_pdf y generé los CSV.
+
+## 4. Decisiones tomadas por iniciativa propia
+- Eje Y del Marey = posición acumulada en minutos de marcha (proxy de distancia), por no
+  tener aún el encadenamiento de km reales por estación. Es exacto respecto al itinerario y
+  se puede cambiar a km cuando mapeemos estaciones->km de Metrolinx.
+- Período asignado por número de página (determinista) en vez de por texto, porque la
+  detección por texto clasificaba mal (el texto de la página 2 contiene "Punta Tarde" en
+  otra sección). PM/Valle = páginas 2-3; Punta Tarde = 4-6.
+- La app consume los CSV ya procesados; pdfplumber NO se agregó a requirements.txt para no
+  arriesgar la instalación en Streamlit Cloud (Python 3.14). El parseo se corre localmente.
+- Incluí los trenes "equipo vacío" que sí tienen salida desde Concepción (p. ej. 20281),
+  porque aparecen en la malla con horario de origen.
+
+## 5. Supuestos
+- El "Tiempo de Viaje" del PDF es el tiempo de marcha por tramo (H:MM:SS) y la "Detención"
+  es el dwell por estación (MM:SS). Validado: la reconstrucción reproduce las llegadas
+  publicadas a Coronel.
+- Todos los trenes de servicio comparten el mismo perfil de marcha/dwell de la tabla
+  (válido para Biotren todo-parada; los equipos vacíos pueden diferir levemente, ~2 min).
+- El tiempo de viaje Concepción->Coronel es 42 min en todos los servicios Lun-Vie.
+
+## 6. Elementos pendientes o sugerencias
+- Falta el sentido Coronel->Concepción (tabla inferior de cada página) y los períodos
+  Sábado (p7-8) y Domingo (p9-10). El parser está preparado para extenderse.
+- Falta la línea Corto Laja (Laja-Talcahuano, p11-15).
+- Material rodante: exportar de OpenTrack (railML Rolling Stock) para capacidad pax/tren y
+  tracción; aún no incorporado.
+- Conectividad de la red: persisten 4 componentes desconectadas (ver bitácora anterior); la
+  línea CC-Coronel vive dentro de una sola componente, así que no bloquea esta fase.
+- Eje del Marey en km reales: pendiente de mapear estaciones->km desde Metrolinx.
+- Recomendado: sacar el repositorio de OneDrive (la sincronización provocó archivos
+  desincronizados y caché .pyc bloqueada durante el trabajo).
+
+## 7. Validaciones recomendadas
+- Revisar el diagrama de Marey (marey_preview.png) contra la circular: nº de trenes por
+  período y horas punta.
+- Confirmar el tiempo de viaje de 42 min y los headways por período (PM/Valle ~? min,
+  Punta Tarde ~? min) contra la operación real.
+- Tras desplegar, verificar en Streamlit que la pestaña Itinerario carga los CSV y el
+  filtro de períodos funciona.
