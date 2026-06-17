@@ -1,0 +1,65 @@
+# Bitácora de intervención
+
+## 1. Encabezado
+- Fecha y hora: 17-06-2026, 17:20
+- Solicitud original: "Sigamos con el modelo" (avanzar hacia la optimización). Se construyó
+  el primer incremento de optimización: generación de escenarios de operación con
+  frecuencia (headway) ajustable y comparación con la operación actual.
+- Archivos resultantes (repo opentrack-network-model, ahora en C:\opentrack-network-model):
+    - src/otnet/scenario.py (nuevo)
+    - app/streamlit_app.py (modificado: nueva pestaña "Escenarios / Optimización")
+    - bitacora_escenarios_2026-06-17.txt (este archivo)
+- Archivos de entrada: data/stations_cc_coronel.csv y data/timetable_cc_coronel.csv (ya
+  existentes, del parseo del itinerario).
+
+## 2. Resumen ejecutivo
+Agregué un generador de escenarios de operación: dado un headway objetivo por período
+(Punta Mañana, Valle, Punta Tarde), construye un itinerario cadenciado Concepción->Coronel
+reutilizando el perfil de marcha y dwell ya extraído, calcula la flota necesaria estimada
+y compara KPIs contra la operación actual. Se integró como tercera pestaña en la app
+Streamlit, con sliders de frecuencia y diagrama de Marey del escenario.
+
+## 3. Detalle de cambios (paso a paso)
+1. src/otnet/scenario.py:
+   - PeriodSpec: período con nombre, hora inicio/fin y headway (min).
+   - generate_timetable(): genera salidas equiespaciadas por período y reconstruye el
+     horario en cada estación (mismo método validado: salida + Σ marcha + Σ dwell).
+   - fleet_estimate(): trenes = ceil((2·viaje + 2·vuelta)/headway).
+   - compare_kpis(): tabla comparativa actual vs escenario.
+2. app/streamlit_app.py:
+   - Importé el módulo scenario.
+   - Cambié de 2 a 3 pestañas (agregué "Escenarios / Optimización").
+   - Nueva pestaña: sliders de headway y rango horario por período + slider de tiempo de
+     vuelta; genera el escenario, muestra métricas (trenes escenario vs actual, flota
+     estimada, tiempo de viaje), el diagrama de Marey del escenario y la comparación de KPIs.
+3. Validación: smoke test con headway 10/20/10 -> 63 trenes (vs 53 actual), flota máx. 11
+   trenes; diagrama de Marey con 63 trazas; comparación de KPIs correcta.
+
+## 4. Decisiones tomadas por iniciativa propia
+- Primer incremento de optimización = generación de itinerario cadenciado (headway
+  constante), por ser la solución regular de referencia y atacar directamente
+  frecuencia/capacidad y robustez (intervalos parejos). El optimizador formal de cruces
+  en vía simple queda para cuando se incorpore el sentido Coronel->Concepción.
+- Flota estimada con fórmula de tiempo de ciclo; marcada explícitamente como aproximada.
+- Valores por defecto de los sliders: punta 10 min, valle 20 min, vuelta 10 min; el usuario
+  los ajusta en la app.
+
+## 5. Supuestos
+- El perfil de marcha y dwell del sentido CC->Coronel aplica a todos los escenarios.
+- Tiempo de viaje base = 42 min (media reconstruida).
+- El tiempo de vuelta en terminal por defecto (10 min) es un placeholder a confirmar.
+
+## 6. Elementos pendientes o sugerencias
+- Sentido Coronel->Concepción y períodos Sábado/Domingo (para cruces y operación completa).
+- Material rodante (railML de OpenTrack) para capacidad pax/tren y validar flota.
+- Restricción de headway mínimo y reglas de cruce en vía simple -> optimizador formal
+  (PESP/MILP) en vez de solo generación cadenciada.
+- Demanda por período para optimizar capacidad vs demanda.
+- Eje del Marey en km reales (mapear estaciones->km de Metrolinx).
+
+## 7. Validaciones recomendadas
+- Revisar que el diagrama de Marey del escenario sea operativamente factible (sin solapes
+  imposibles) una vez se sume el headway mínimo.
+- Confirmar el tiempo de vuelta real en Coronel y Concepción.
+- Tras hacer push, verificar en Streamlit que la pestaña "Escenarios / Optimización" carga
+  y que los sliders regeneran el diagrama.

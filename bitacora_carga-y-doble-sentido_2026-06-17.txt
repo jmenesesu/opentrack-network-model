@@ -1,0 +1,82 @@
+## 1. Encabezado
+- Fecha y hora: 17-06-2026, 18:30
+- Solicitud original: agregar los trenes de carga (TRANSAP y FEPASA) al diagrama de Marey
+  como restricción fija; y corregir que el Marey solo mostraba el sentido Concepción->
+  Coronel (faltaba Coronel->Concepción).
+- Archivos resultantes (repo C:\opentrack-network-model):
+    - src/otnet/timetable_pdf.py (modificado: ambos sentidos + kilometraje)
+    - src/otnet/freight_pdf.py (nuevo: parser de carga)
+    - src/otnet/marey.py (modificado: eje km, 2 sentidos, superposición de carga, KPIs por sentido)
+    - scripts/parse_freight.py (nuevo)
+    - app/streamlit_app.py (modificado: filtros de sentido, toggle de carga, KPIs por sentido)
+    - data/timetable_cc_coronel.csv (regenerado: 113 trenes, 2 sentidos, con km)
+    - data/freight_corridor.csv (nuevo: 36 trenes de carga)
+    - data/stations_cc_coronel.csv (regenerado: con columna km)
+    - data/source_pdf/Circular_2-421_Carga_TRANSAP_2026.pdf y Circular_2-416_Carga_FEPASA_2026.pdf
+    - marey_preview.png (vista previa)
+    - bitacora_carga-y-doble-sentido_2026-06-17.txt (este archivo)
+- Archivos de entrada: "2-421 ... TRANSAP V2.pdf", "2-416 ... FEPASA V2.pdf",
+  y el itinerario de pasajeros "2-410 ...".
+
+## 2. Resumen ejecutivo
+Extendí el parser de pasajeros para extraer los dos sentidos (Concepción->Coronel y
+Coronel->Concepción): 53 + 60 = 113 trenes Lun-Vie. Creé un parser de los programas de
+carga TRANSAP y FEPASA que extrae las pasadas por el corredor CC-Coronel (36 trenes).
+Pasé el diagrama de Marey a eje de kilómetros reales y superpuse la carga como
+restricción fija. Todo quedó integrado en la app Streamlit.
+
+## 3. Detalle de cambios (paso a paso)
+1. timetable_pdf.py: generalicé el parseo a las dos tablas de cada página (superior
+   CC->CW, inferior CW->CC), detectando ambas cabeceras de tren. Agregué asignación de
+   kilometraje por estación (_assign_km): anclas Concepción=0, Lomas Coloradas=11.5,
+   Coronel=27.7 (km del programa de carga) e interpolación por tiempo de marcha
+   acumulado para el resto.
+2. freight_pdf.py: parser de los PDF de carga. Detecta cabeceras de tren (5 dígitos),
+   sub-columnas Llega/Sale y filas de estación del corredor (Concepción, Biobío, Boca
+   Sur, Lomas Coloradas, Escuadrón, Lagunillas, Coronel) con su km fijo. Reconstruye la
+   secuencia de paso por tren, infiere el sentido y desenvuelve cruces de medianoche
+   (rango > 6 h => horas < 6:00 pasan al día siguiente, +24 h).
+3. marey.py: eje Y en km; dibuja ambos sentidos de pasajeros (azul/verde) y la carga
+   punteada (TRANSAP rojo, FEPASA naranjo); KPIs por sentido; headway_table por sentido.
+4. app/streamlit_app.py: pestaña Marey con filtros de período y sentido, casilla
+   "Mostrar carga", KPIs por sentido y tabla de salidas por sentido. Añadí load_freight().
+5. scripts/parse_freight.py para regenerar el CSV de carga.
+6. Regeneré los CSV y validé: pasajeros 113 trenes; carga 36 (32 FEPASA + 4 TRANSAP);
+   Marey con ambos sentidos + carga; tiempo de viaje 42 min en los dos sentidos.
+
+## 4. Decisiones tomadas por iniciativa propia
+- Eje del Marey en km: usé los km del programa de carga como anclas e interpolé los
+  paraderos intermedios por tiempo de marcha (aproximación, marcada como tal). Permite
+  superponer pasajeros y carga en un mismo eje físico.
+- Para la carga, modelé solo los 7 puntos ferroviarios del corredor CC-Coronel (las
+  estaciones de carga no coinciden con los paraderos de pasajeros); su km es
+  infraestructura fija tomada del PDF.
+- Filtré los trenes de carga a los que tienen >=2 estaciones del corredor (los que solo
+  tocan Concepción de paso a otra línea quedan fuera).
+- Corrección de medianoche aplicada también directamente al CSV (post-proceso) por un
+  desfase de sincronización del entorno al regenerar; el parser ya la incorpora.
+
+## 5. Supuestos
+- Las estaciones de carga "Concepción, Biobío, Boca Sur, Lomas Coloradas, Escuadrón,
+  Lagunillas, Coronel" están en km 0/3.1/7.4/11.5/19.7/24.5/27.7 (del programa de carga).
+- El tiempo "Sale" (o "Llega" si no hay Sale) representa el paso del tren de carga.
+- Los trenes de carga son fijos (restricción), no se optimizan.
+- OMER HUET y Desvío Lagunillas no son paradas de pasajeros (no se modelan como tales).
+
+## 6. Elementos pendientes o sugerencias
+- Falta el corredor Hualqui-Talcahuano (Línea 1, 13 estaciones): su Marey y su carga.
+- Falta material rodante (railML de OpenTrack): capacidad pax/tren, tracción, y la flota
+  real (11 SFE-100, 3 SFE-200, 2 UT-440) para validar la estimación de flota.
+- Restricciones para el optimizador formal: headway mínimo, cruces en vía simple,
+  ocupación de canal por la carga (ya disponible como dato), cocheras (últimas páginas
+  del 2-410) y restricciones eléctricas (SER de 3/6 MW, 3000 V, 200 A por automotor).
+- Eje km exacto de los paraderos de pasajeros (hoy interpolado): se puede refinar con
+  Metrolinx o con los km del propio itinerario.
+- Sábado y Domingo de pasajeros (páginas 7-10) aún no incorporados.
+
+## 7. Validaciones recomendadas
+- Revisar el diagrama (marey_preview.png): que los cruces pasajero/carga sean plausibles.
+- Confirmar que los 36 trenes de carga del corredor correspondan a los que realmente
+  circulan CC-Coronel (descartar falsos positivos por coincidencia de nombre).
+- Verificar los km anclados (Concepción 0, Coronel 27.7) contra los 28.4 km informados.
+- Tras hacer push, revisar en Streamlit la casilla "Mostrar carga" y el filtro de sentidos.

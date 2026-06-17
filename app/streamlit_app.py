@@ -26,6 +26,9 @@ from otnet.network import (                               # noqa: E402
 )
 from otnet.running_time import add_running_times, running_time_by_document  # noqa: E402
 from otnet.marey import marey_figure, kpis, headway_table  # noqa: E402
+from otnet.scenario import (                              # noqa: E402
+    PeriodSpec, generate_timetable, fleet_estimate, compare_kpis,
+)
 
 BASE = os.path.join(os.path.dirname(__file__), "..")
 DEFAULT_DATA_DIR = os.path.join(BASE, "data", "raw")
@@ -47,6 +50,12 @@ def load_timetable():
     tt = pd.read_csv(os.path.join(DATA_DIR, "timetable_cc_coronel.csv"))
     st_ = pd.read_csv(os.path.join(DATA_DIR, "stations_cc_coronel.csv"))
     return tt, st_
+
+
+@st.cache_data(show_spinner=False)
+def load_freight():
+    path = os.path.join(DATA_DIR, "freight_corridor.csv")
+    return pd.read_csv(path) if os.path.exists(path) else None
 
 
 def network_graph_figure(macro: nx.Graph) -> go.Figure:
@@ -75,7 +84,9 @@ def network_graph_figure(macro: nx.Graph) -> go.Figure:
 
 st.title("Red y operación ferroviaria — EFE Sur")
 
-tab_red, tab_marey = st.tabs(["Red (infraestructura)", "Itinerario Biotren (Marey)"])
+tab_red, tab_marey, tab_scn = st.tabs([
+    "Red (infraestructura)", "Itinerario Biotren (Marey)", "Escenarios / Optimización",
+])
 
 # --------------------------------------------------------------------------- #
 # Pestaña RED
@@ -121,30 +132,93 @@ with tab_marey:
                  "`python scripts/parse_timetable.py --pdf <circular.pdf>`.")
         st.stop()
 
+    freight = load_freight()
     k = kpis(tt, stations)
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Trenes (Lun-Vie)", k["trenes_total"])
-    c2.metric("Estaciones", k["estaciones"])
+    c1.metric("Pasajeros CC→CW", k["por_direccion"].get("CC->CW", {}).get("trenes", 0))
+    c2.metric("Pasajeros CW→CC", k["por_direccion"].get("CW->CC", {}).get("trenes", 0))
     c3.metric("Tiempo de viaje (min)", k["tiempo_viaje_min"]["media"])
-    periodos = sorted(tt["period"].unique())
-    c4.metric("Períodos", len(periodos))
+    c4.metric("Trenes de carga", int(freight["train"].nunique()) if freight is not None else 0)
 
-    sel = st.multiselect("Períodos a mostrar", periodos, default=periodos)
-    st.plotly_chart(marey_figure(tt, stations, periods=sel), use_container_width=True)
+    f1, f2, f3 = st.columns([2, 2, 1])
+    periodos = sorted(tt["period"].unique())
+    sel = f1.multiselect("Períodos", periodos, default=periodos)
+    dirs = f2.multiselect("Sentidos", ["CC->CW", "CW->CC"], default=["CC->CW", "CW->CC"])
+    show_freight = f3.checkbox("Mostrar carga", value=True)
+
+    st.plotly_chart(
+        marey_figure(tt, stations, periods=sel, directions=dirs,
+                     freight=freight if show_freight else None),
+        use_container_width=True)
 
     colA, colB = st.columns(2)
     with colA:
-        st.subheader("Indicadores por período")
-        rows = [{"período": p, "trenes": v["trenes"],
-                 "headway medio (min)": v["headway_medio_min"]}
-                for p, v in k["por_periodo"].items()]
+        st.subheader("Indicadores por sentido")
+        rows = [{"sentido": d, "trenes": v["trenes"],
+                 "viaje medio (min)": v["viaje_medio_min"]}
+                for d, v in k["por_direccion"].items()]
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
     with colB:
-        st.subheader("Salidas desde Concepción e intervalos")
-        ht = headway_table(tt, stations)
+        st.subheader("Salidas e intervalos")
+        dsel = st.radio("Sentido", ["CC->CW", "CW->CC"], horizontal=True)
+        ht = headway_table(tt, stations, direction=dsel)
         if sel:
             ht = ht[ht["period"].isin(sel)]
-        st.dataframe(ht, use_container_width=True, hide_index=True, height=300)
+        st.dataframe(ht, use_container_width=True, hide_index=True, height=260)
 
-    st.caption("Horario reconstruido desde la Circular 2/410 (tiempo de marcha por "
-               "tramo + dwell). Tiempos validados contra las llegadas publicadas a Coronel.")
+    st.caption("Pasajeros: horario reconstruido de la Circular 2/410 (validado contra "
+               "llegadas a Coronel). Carga (TRANSAP/FEPASA): restricción fija de la "
+               "operación; horarios de los programas 2/421 y 2/416.")
+
+# --------------------------------------------------------------------------- #
+# Pestaña ESCENARIOS / OPTIMIZACIÓN
+# --------------------------------------------------------------------------- #
+with tab_scn:
+    try:
+        tt, stations = load_timetable()
+    except FileNotFoundError:
+        st.error("Falta el itinerario procesado (data/timetable_cc_coronel.csv).")
+        st.stop()
+
+    st.markdown("Define la **frecuencia objetivo** por período y el modelo genera un "
+                "itinerario cadenciado (headway constante) para Concepción → Coronel.")
+
+    travel_min = kpis(tt, stations)["tiempo_viaje_min"]["media"] or 42.0
+
+    cfg = st.columns(4)
+    with cfg[0]:
+        hw_pm = st.slider("Headway Punta Mañana (min)", 5, 40, 10)
+        rng_pm = st.slider("Punta Mañana (h)", 5.0, 12.0, (6.0, 9.0), step=0.5)
+    with cfg[1]:
+        hw_v = st.slider("Headway Valle (min)", 5, 60, 20)
+        rng_v = st.slider("Valle (h)", 8.0, 18.0, (9.0, 17.0), step=0.5)
+    with cfg[2]:
+        hw_pt = st.slider("Headway Punta Tarde (min)", 5, 40, 10)
+        rng_pt = st.slider("Punta Tarde (h)", 16.0, 23.0, (17.0, 20.0), step=0.5)
+    with cfg[3]:
+        turnaround = st.slider("Tiempo de vuelta en terminal (min)", 0, 30, 10)
+
+    periods = [
+        PeriodSpec("Punta Mañana", rng_pm[0], rng_pm[1], hw_pm),
+        PeriodSpec("Valle", rng_v[0], rng_v[1], hw_v),
+        PeriodSpec("Punta Tarde", rng_pt[0], rng_pt[1], hw_pt),
+    ]
+    scenario = generate_timetable(stations, periods)
+
+    fleet = max(fleet_estimate(travel_min, hw, turnaround) for hw in (hw_pm, hw_v, hw_pt))
+    m = st.columns(4)
+    m[0].metric("Trenes/día (escenario)", scenario["train"].nunique())
+    m[1].metric("Trenes/día (actual)", tt["train"].nunique())
+    m[2].metric("Flota máx. estimada", f"{fleet} trenes")
+    m[3].metric("Tiempo de viaje (min)", round(travel_min, 0))
+
+    st.plotly_chart(marey_figure(scenario, stations), use_container_width=True)
+
+    st.subheader("Comparación con la operación actual")
+    st.dataframe(compare_kpis(tt, scenario, stations),
+                 use_container_width=True, hide_index=True)
+
+    st.caption("Flota estimada = ceil((2·viaje + 2·vuelta) / headway); aproximada, "
+               "pendiente de validar con material rodante y el sentido inverso. "
+               "El optimizador formal de cruces se incorpora al sumar Coronel→Concepción.")
+
